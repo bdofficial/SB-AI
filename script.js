@@ -35,15 +35,38 @@ if (message.includes("how are you")) {
     speech.pitch = 1.3;
     window.speechSynthesis.speak(speech); 
   } 
+else if (message.toLowerCase() == "who is aslam") {
+  speech.text = "aslam is your friend";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.8;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "can you be my gf" || message.toLowerCase() == "will you be my gf") {
+  speech.text = "i am already your gf";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.3;
+  speech.rate = 0.05;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "oh really") {
+  speech.text = "yes what else you think i am";
+  textinto.innerHTML = speech.text;
+  speech.volume = 1;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
 else if (message.toLowerCase() == "hello darling") {
   speech.text = "yes hunny";
   textinto.innerHTML = speech.text;
   speech.volume = 1;
   speech.rate = 0.05;
-  speech.pitch = 1.3;
+  speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 } 
-
 else if (message.includes("can you open app")) {
   speech.text = "yes i can";
   textinto.innerHTML = speech.text;
@@ -116,11 +139,11 @@ else if (message.includes("can you sing")) {
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 }
-else if (message.includes("can you tell me a story")) {
+else if (message.toLowerCase() == "can you tell me a story" || message.toLowerCase() == "can you tell me story"|| message.toLowerCase() == "tell me a story"|| message.toLowerCase() == "tell me story") {
   speech.text = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly).";
   textinto.innerHTML=speech.text;
   speech.volume = 1;
-  speech.rate = 0.4;
+  speech.rate = 0.8;
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 }
@@ -159,7 +182,7 @@ else if (message.includes("what is your name")) {
 else {
   speech.text = "please say again";
   textinto.innerHTML = speech.text;
-  speech.volume = 1;
+  speech.volume = 0.4;
   speech.rate = 0.84;
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
