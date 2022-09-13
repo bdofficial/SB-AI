@@ -203,7 +203,7 @@ else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tik
   window.open('https://tiktok.com');
   textinto.innerHTML = "tiktok oppened";
 }
-else if (message.includes("can you tell me today's weather")) {
+else if (message.toLowerCase() == "can you told me today's weather" || message.toLowerCase() == "wather") {
   speech.text = "no i can't";
   textinto.innerHTML = speech.text;
   speech.volume = 1;
