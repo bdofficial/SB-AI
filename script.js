@@ -1,6 +1,5 @@
 const btn = document.querySelector(".talk");
 // const content = document.querySelector(".content");
-
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -92,6 +91,5 @@ else {
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 }
-
 
 };
