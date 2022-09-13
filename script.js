@@ -32,7 +32,13 @@ if (message.includes("how are you")) {
     speech.pitch = 1.3;
     window.speechSynthesis.speak(speech);
   } 
-
+else if (message.includes("can you tell me a story")) {
+  speech.text = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly).";
+  speech.volume = 1;
+  speech.rate = 0.4;
+  speech.pitch = 1.4;
+  window.speechSynthesis.speak(speech);
+}
 else if (message.includes("time")) {
   speech.text = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }));
   speech.volume = 1;
