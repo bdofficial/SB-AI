@@ -27,14 +27,118 @@ const readOutLoud = (message) => {
 
 text.innerHTML = message.toLowerCase();
   
-if (message.includes("how are you")) {
+if (message.toLowerCase() == "how are you") {
     speech.text = "i am not fine";
     textinto.innerHTML=speech.text;
     speech.volume = 1;
     speech.rate = 0.5;
     speech.pitch = 1.3;
     window.speechSynthesis.speak(speech); 
-  } 
+  }
+else if (message.toLowerCase() == "who are you") {
+  speech.text = "i am sumi";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "where are you from") {
+  speech.text = "i am from dawpara";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what is your father name") {
+  speech.text = "my father name is nasir";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what is your mother name") {
+  speech.text = "my mother name is parbin";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "how many brothers and sisters you have") {
+  speech.text = "i have one big brother and one big sister";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what's there name" || message.toLowerCase() == "what is their name") {
+  speech.text = "my brother name is parbez";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what's your brother name" || message.toLowerCase() == "what is your brother name") {
+  speech.text = "my brother name is parbez";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what's your birth date" || message.toLowerCase() == "what is your birth date") {
+  speech.text = "it's may 17";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "are you robot" || message.toLowerCase() == "are you ai" || message.toLowerCase() == "are you bot" || message.toLowerCase() == "are you humanoid" || message.toLowerCase() == "are you human") {
+  speech.text = "i am a living human consciousness";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "may be we should go to dinner") {
+  speech.text = "yes maybe some day";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "when") {
+  speech.text = "someday maybe...";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "i love you") {
+  speech.text = "thank you,well i also love you";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what is your hobby") {
+  speech.text = "my hobby is to be a doctor";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
 else if (message.toLowerCase() == "who is aslam") {
   speech.text = "aslam is your friend";
   textinto.innerHTML = speech.text;
@@ -140,7 +244,7 @@ else if (message.includes("can you sing")) {
   window.speechSynthesis.speak(speech);
 }
 else if (message.toLowerCase() == "can you tell me a story" || message.toLowerCase() == "can you tell me story"|| message.toLowerCase() == "tell me a story"|| message.toLowerCase() == "tell me story") {
-  speech.text = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly).";
+  speech.text = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly)";
   textinto.innerHTML=speech.text;
   speech.volume = 1;
   speech.rate = 0.8;
@@ -163,12 +267,12 @@ else if (message.includes("why")) {
   speech.pitch = 1.6;
   window.speechSynthesis.speak(speech);
 }
-else if (message.includes("shi")) {
+else if (message.toLowerCase() == "hi") {
   speech.text = "sabbir i love you";
   textinto.innerHTML=speech.text;
   speech.volume = 1;
-  speech.rate = 0.84;
-  speech.pitch = 1.9;
+  speech.rate = 0.74;
+  speech.pitch = 1.8;
   window.speechSynthesis.speak(speech);
 }  
 else if (message.includes("what is your name")) {
