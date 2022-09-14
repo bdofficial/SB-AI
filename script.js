@@ -35,6 +35,33 @@ if (message.toLowerCase() == "how are you") {
     speech.pitch = 1.3;
     window.speechSynthesis.speak(speech); 
   }
+else if (message.toLowerCase() == "don't you say good morning to me" || message.toLowerCase() == "good morning") {
+  speech.text = "good morning";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.6;
+  speech.rate = 0.6;
+  speech.pitch = 1.7;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "what you can do") {
+  speech.text = "whatever you want";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.6;
+  speech.rate = 0.6;
+  speech.pitch = 1.7;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "do you love me") {
+  speech.text = "of course,i love you";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 1.1;
+  speech.pitch = 1.7;
+  window.speechSynthesis.speak(speech);
+}
+//////////////////
+//////////////////
+//////////////////
 else if (message.toLowerCase() == "who are you") {
   speech.text = "i am sumi";
   textinto.innerHTML = speech.text;
@@ -45,6 +72,22 @@ else if (message.toLowerCase() == "who are you") {
 }
 else if (message.toLowerCase() == "where are you from") {
   speech.text = "i am from dawpara";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "where are you living") {
+ speech.text = "i am living in dawpara";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+else if (message.toLowerCase() == "do you love dawpara") {
+  speech.text = "of course i love dawpara";
   textinto.innerHTML = speech.text;
   speech.volume = 0.8;
   speech.rate = 0.7;
@@ -99,6 +142,17 @@ else if (message.toLowerCase() == "what's your birth date" || message.toLowerCas
   speech.pitch = 1.5;
   window.speechSynthesis.speak(speech);
 }
+else if (message.toLowerCase() == "how old are you" || message.toLowerCase() == "what is your age") {
+  speech.text = "i am 18 years old";
+  textinto.innerHTML = speech.text;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+  window.speechSynthesis.speak(speech);
+}
+//////////////////
+//////////////////
+//////////////////
 else if (message.toLowerCase() == "are you robot" || message.toLowerCase() == "are you ai" || message.toLowerCase() == "are you bot" || message.toLowerCase() == "are you humanoid" || message.toLowerCase() == "are you human") {
   speech.text = "i am a living human consciousness";
   textinto.innerHTML = speech.text;
@@ -156,7 +210,7 @@ else if (message.toLowerCase() == "can you be my gf" || message.toLowerCase() ==
   window.speechSynthesis.speak(speech);
 }
 else if (message.toLowerCase() == "oh really") {
-  speech.text = "yes what else you think i am";
+  speech.text = "of course";
   textinto.innerHTML = speech.text;
   speech.volume = 1;
   speech.rate = 0.7;
@@ -203,11 +257,11 @@ else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tik
   window.open('https://tiktok.com');
   textinto.innerHTML = "tiktok oppened";
 }
-else if (message.toLowerCase() == "can you told me today's weather" || message.toLowerCase() == "wather") {
-  speech.text = "no i can't";
+else if (message.toLowerCase() == "can you told me today's weather" || message.toLowerCase() == "weather"|| message.toLowerCase() == "what's the weather outside"|| message.toLowerCase() == "what's the weather") {
+  speech.text = "it's a rainy day";
   textinto.innerHTML = speech.text;
-  speech.volume = 1;
-  speech.rate = 0.4;
+  speech.volume = 0.8;
+  speech.rate = 0.7;
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 }
@@ -287,7 +341,7 @@ else {
   speech.text = "please say again";
   textinto.innerHTML = speech.text;
   speech.volume = 0.4;
-  speech.rate = 0.84;
+  speech.rate = 0.89;
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 }
