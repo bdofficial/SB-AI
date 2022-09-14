@@ -253,7 +253,7 @@ else if (message.toLowerCase() == "open twitter" || message.toLowerCase() == "tw
   window.open('https://twitter.com');
   textinto.innerHTML = "twitter oppened";
 }
-else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tiktok") {
+else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tiktok"|| message.toLowerCase() == "tik tok") {
   window.open('https://tiktok.com');
   textinto.innerHTML = "tiktok oppened";
 }
