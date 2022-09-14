@@ -36,8 +36,14 @@ if (message.includes("weather")) {
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
-}
+} 
 //////////
+else if (message.toLowerCase() == "why you look so gorgeous"||message.toLowerCase() == "why you look so beautiful") {
+  speech.text = "hah thank you dear";
+  speech.volume = 1;
+  speech.rate = 0.8;
+  speech.pitch = 1.3;
+}
 else if (message.toLowerCase() == "how are you") {
   speech.text = "i am not fine";
   speech.volume = 1;
@@ -287,7 +293,7 @@ else if (message.includes("date")){
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-else if (message.includes("why")) {
+else if (message.toLowerCase() == "why") {
   speech.text = "because my husband is very bad person"
   speech.volume = 1;
   speech.rate = 0.78;
