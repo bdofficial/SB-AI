@@ -1,3 +1,10 @@
+//date
+date = new Date();
+var dd = String(date.getDate()).padStart(2, '0');
+var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = date.getFullYear().toString().substr(-2);
+date = dd + '/' + mm + '/' + yyyy;
+////////////
 const btn = document.querySelector(".talk");
 // const content = document.querySelector(".content");
 const SpeechRecognition =
@@ -18,19 +25,25 @@ recognition.onresult = (event) => {
   readOutLoud(transcript);
 };
 ////////
-recognition.start();
 btn.addEventListener("click", () => {
   recognition.start();
 });
 ////////
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
-if (message.toLowerCase() == "how are you") {
-    speech.text = "i am not fine";
-    speech.volume = 1;
-    speech.rate = 0.5;
-    speech.pitch = 1.3;
-  }
+if (message.includes("weather")) {
+  speech.text = "it's a rainy day";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.4;
+}
+//////////
+else if (message.toLowerCase() == "how are you") {
+  speech.text = "i am not fine";
+  speech.volume = 1;
+  speech.rate = 0.5;
+  speech.pitch = 1.3;
+}
 else if (message.toLowerCase() == "don't you say good morning to me" || message.toLowerCase() == "good morning") {
   speech.text = "good morning";
   speech.volume = 0.6;
@@ -232,12 +245,6 @@ else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tik
   speech.pitch = 1.4;
 }
 ///////////////////
-else if (message.toLowerCase() == "can you told me today's weather" || message.toLowerCase() == "weather"|| message.toLowerCase() == "what's the weather outside"|| message.toLowerCase() == "what's the weather") {
-  speech.text = "it's a rainy day";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
-}
 else if (message.includes("what is problem")) {
   speech.text = "problem is you are human";
   speech.volume = 1;
@@ -273,6 +280,12 @@ else if (message.includes("time")) {
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
+}
+else if (message.includes("date")){
+  speech.text = date;
+  speech.volume = 0.6;
+  speech.rate = 0.6;
+  speech.pitch = 1.7;
 }
 else if (message.includes("why")) {
   speech.text = "because my husband is very bad person"
