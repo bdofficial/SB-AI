@@ -61,6 +61,12 @@ if (message.includes("weather")) {
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
+else if (message.toLowerCase() == "how many members are in your family") {
+  speech.text = "we are 5 members in our family";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
 else if (message.toLowerCase() == "are you single") {
   speech.text = "yes";
   speech.volume = 0.8;
