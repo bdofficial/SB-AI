@@ -36,8 +36,20 @@ if (message.includes("weather")) {
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
-} 
+}
 //////////
+else if (message.includes("because")) {
+  speech.text = "oh really";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.4;
+}
+else if (message.includes("lucky")) {
+  speech.text = "why";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.4;
+}
 else if (message.toLowerCase() == "why you look so gorgeous"||message.toLowerCase() == "why you look so beautiful") {
   speech.text = "hah thank you dear";
   speech.volume = 1;
