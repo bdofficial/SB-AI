@@ -52,7 +52,7 @@ else if (message.toLowerCase() == "what you can do") {
   window.speechSynthesis.speak(speech);
 }
 else if (message.toLowerCase() == "do you love me") {
-  speech.text = "of course,i love you";
+  speech.text = "of course,i love you sabbir";
   textinto.innerHTML = speech.text;
   speech.volume = 0.8;
   speech.rate = 1.1;
@@ -233,9 +233,14 @@ else if (message.includes("can you open app")) {
   speech.pitch = 1.4;
   window.speechSynthesis.speak(speech);
 }
+///////////////////
 else if (message.toLowerCase() == "open flashlight" || message.toLowerCase() == "flashlight") {
   window.open('https://bdurl.netlify.app/fl.html');
   textinto.innerHTML = "flashlight oppened";
+}
+else if (message.toLowerCase() == "google" || message.toLowerCase() == "youtube") {
+  window.open('https://google.com');
+  textinto.innerHTML = "google oppened";
 }
 else if (message.toLowerCase()=="open youtube"|| message.toLowerCase() == "youtube") {
   window.open('https://youtube.com');
@@ -245,7 +250,7 @@ else if (message.toLowerCase() == "open facebook" || message.toLowerCase() == "f
   window.open('https://facebook.com');
   textinto.innerHTML = "facebook oppened";
 }
-else if (message.toLowerCase() == "open instagram" || message.toLowerCase() == "instagram") {
+else if (message.toLowerCase() == "open instagram" || message.toLowerCase() == "instagram" || message.toLowerCase() == "ig") {
   window.open('https://instagram.com');
   textinto.innerHTML = "instagram oppened";
 }
@@ -257,6 +262,7 @@ else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tik
   window.open('https://tiktok.com');
   textinto.innerHTML = "tiktok oppened";
 }
+///////////////////
 else if (message.toLowerCase() == "can you told me today's weather" || message.toLowerCase() == "weather"|| message.toLowerCase() == "what's the weather outside"|| message.toLowerCase() == "what's the weather") {
   speech.text = "it's a rainy day";
   textinto.innerHTML = speech.text;
@@ -321,8 +327,8 @@ else if (message.includes("why")) {
   speech.pitch = 1.6;
   window.speechSynthesis.speak(speech);
 }
-else if (message.toLowerCase() == "hi") {
-  speech.text = "sabbir i love you";
+else if (message.toLowerCase() == "hi" || message.toLowerCase() == "hello") {
+  speech.text = "what's up";
   textinto.innerHTML=speech.text;
   speech.volume = 1;
   speech.rate = 0.74;
