@@ -61,6 +61,18 @@ if (message.includes("weather")) {
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
+else if (message.toLowerCase() == "what is your husband name") {
+  speech.text = "my husband name is sabbir";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (message.toLowerCase() == "do you love him") {
+  speech.text = "i love sabbir";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
 else if (message.toLowerCase() == "how many members are in your family") {
   speech.text = "we are 5 members in our family";
   speech.volume = 0.8;
@@ -370,8 +382,19 @@ else if (message.includes("what is your name")) {
     speech.volume = 1;
     speech.rate = 0.84;
     speech.pitch = 1.4;
- 
 }  
+else if (message.includes("who is sabbir")) {
+  speech.text = "sabbir is my husband";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (message.includes("do you think it's a boring day")) {
+  speech.text = "yes sabbir";
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 else {
   speech.text = "please say again";
   speech.volume = 0.4;
