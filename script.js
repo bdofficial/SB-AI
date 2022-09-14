@@ -73,8 +73,8 @@ else if (message.toLowerCase() == "are you single") {
   speech.rate = 0.5;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "do you have a bf") {
-  speech.text = "no i don't have";
+else if (message.toLowerCase() == "do you have a bf"||message.toLowerCase() == "do you have bf"||message.toLowerCase() == "what is your bf name") {
+  speech.text = "no i don't have bf";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
@@ -91,6 +91,12 @@ else if (message.includes("lucky")) {
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
+}
+else if (message.toLowerCase() == "why you are so gorgeous" || message.toLowerCase() == "why you are so beautiful") {
+  speech.text = "because you are my husband";
+  speech.volume = 1;
+  speech.rate = 0.9;
+  speech.pitch = 1.48;
 }
 else if (message.toLowerCase() == "why you look so gorgeous"||message.toLowerCase() == "why you look so beautiful") {
   speech.text = "hah thank you dear";
