@@ -1,4 +1,13 @@
-//date
+/////////////
+const listenBtn = document.querySelector(".talk");
+listenBtn.addEventListener('dbclick', (e) => {
+  e.preventDefault();
+  const msg = new SpeechSynthesisUtterance(
+    "hi sabbir"
+  );
+  window.speechSynthesis.speak(msg);
+});
+//////////date
 date = new Date();
 var dd = String(date.getDate()).padStart(2, '0');
 var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -26,7 +35,7 @@ recognition.onresult = (event) => {
 };
 ////////
 btn.addEventListener("click", () => {
-  recognition.start();
+recognition.start();
 });
 ////////
 const readOutLoud = (message) => {
