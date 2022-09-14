@@ -1,12 +1,27 @@
+	var data = [
+    [0, 4, "hello sir"], 
+    [5, 11, "Good morning"],    
+    [12, 14, "Good noon"],
+    [15, 17, "Good afternoon"],
+    [18, 19, "Good evening"],
+    [20, 24, "how are you sabbir"]
+    ],
+    hr = new Date().getHours();
+for(var i = 0; i < data.length; i++){
+    if(hr >= data[i][0] && hr <= data[i][1]){
+        timesay=(data[i][2]);
 /////////////
 const listenBtn = document.querySelector(".talk");
-listenBtn.addEventListener('dbclick', (e) => {
+listenBtn.addEventListener('mouseover', (e) => {
   e.preventDefault();
   const msg = new SpeechSynthesisUtterance(
-    "hi sabbir"
+    timesay
   );
+  msg.volume = 0.8;
+  msg.rate = 0.7;
+  msg.pitch = 1.4;
   window.speechSynthesis.speak(msg);
-});
+});}}
 //////////date
 date = new Date();
 var dd = String(date.getDate()).padStart(2, '0');
@@ -65,7 +80,7 @@ else if (message.toLowerCase() == "why you look so gorgeous"||message.toLowerCas
   speech.rate = 0.8;
   speech.pitch = 1.3;
 }
-else if (message.toLowerCase() == "how are you") {
+else if (message.toLowerCase() == "how are you"||message.toLowerCase() == "and you") {
   speech.text = "i am not fine";
   speech.volume = 1;
   speech.rate = 0.5;
