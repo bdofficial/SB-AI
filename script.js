@@ -57,12 +57,26 @@ const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
  voice=message.toLowerCase();
  text.innerHTML = voice;
+//////////////////
 if (voice.includes("weather")) {
   speech.text = "it's a rainy day";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
+else if (voice.includes("date")) {
+  speech.text = date;
+  speech.volume = 0.6;
+  speech.rate = 0.6;
+  speech.pitch = 1.7;
+}
+else if (voice.includes("time")) {
+  speech.text = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
+  speech.volume = 1;
+  speech.rate = 0.4;
+  speech.pitch = 1.4;
+}
+///////////////////
 else if (voice.includes("youtube search")) {
   speech.text = voice.replaceAll('search','searched');
   window.open('https://m.youtube.com/results?sp=mAEA&search_query='+voice.replaceAll('youtube search',''));
@@ -70,7 +84,6 @@ else if (voice.includes("youtube search")) {
   speech.rate = 0.5;
   speech.pitch = 1.4;
 }
-
 else if (voice.includes("google search")) {
   speech.text = voice.replaceAll("search",'searched');
   window.open('https://www.google.com/search?sitesearch=&q='+voice.replaceAll("google search",''));
@@ -375,18 +388,6 @@ else if (voice=="can you tell me a story" || voice=="can you tell me story"|| vo
   speech.volume = 1;
   speech.rate = 0.8;
   speech.pitch = 1.4;
-}
-else if (message.includes("time")) {
-  speech.text = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
-}
-else if (message.includes("date")){
-  speech.text = date;
-  speech.volume = 0.6;
-  speech.rate = 0.6;
-  speech.pitch = 1.7;
 }
 else if (voice=="why") {
   speech.text = "because my husband is very bad person"
