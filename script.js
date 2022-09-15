@@ -61,6 +61,12 @@ if (message.includes("weather")) {
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
+else if (message.toLowerCase() == "do you have a dream") {
+  speech.text = "yes i have dream of you";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.6;
+}
 else if (message.toLowerCase() == "what is your husband name") {
   speech.text = "my husband name is sabbir";
   speech.volume = 0.8;
