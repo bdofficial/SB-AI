@@ -180,7 +180,7 @@ else if (voice=="do you love me") {
 //////////////////
 //////////////////
 else if (voice=="who are you") {
-  speech.text = "i am sumi";
+  speech.text = "i am somaia";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
@@ -192,49 +192,55 @@ else if (voice=="where are you from") {
   speech.pitch = 1.5;
 }
 else if (voice=="where are you living") {
- speech.text = "i am living in dawpara";
+ speech.text = "i am living in khalapara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice=="do you love dawpara") {
+else if (voice=="do you love khalapara") {
   speech.text = "of course i love dawpara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice=="what is your father name") {
-  speech.text = "my father name is nasir";
+else if (voice=="what is your father khalapara") {
+  speech.text = "my father name is ali asgor boiya";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice=="what is your mother name") {
-  speech.text = "my mother name is parbin";
+else if (voice=="what is your mother name janina") {
+  speech.text = "my mother name is ";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 else if (voice=="how many brothers and sisters you have") {
-  speech.text = "i have one big brother and one big sister";
+  speech.text = "i have tow big brother and tow big sister";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 else if (voice=="what's there name" || voice=="what is their name") {
-  speech.text = "my brother name is parbez";
+  speech.text = "my brother name is rakib and sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice=="what's your brother name" || voice=="what is your brother name") {
-  speech.text = "my brother name is parbez";
+else if (voice=="what's your big brother name" || voice=="what is your big brother name") {
+  speech.text = "my big brother name is rakib";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (voice == "what's your small brother name" || voice == "what is your small brother name") {
+  speech.text = "my small brother name is sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 else if (voice=="what's your birth date" || voice=="what is your birth date") {
-  speech.text = "it's may 17";
+  speech.text = "it's september 30";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
@@ -276,6 +282,12 @@ else if (voice=="what is your hobby") {
   speech.text = "my hobby is to be a doctor";
   speech.volume = 0.8;
   speech.rate = 0.5;
+  speech.pitch = 1.5;
+}
+else if (voice == "who is anisa") {
+  speech.text = "anisa is my brothers daughter";
+  speech.volume = 0.8;
+  speech.rate = 0.8;
   speech.pitch = 1.5;
 }
 else if (voice=="who is aslam") {
@@ -402,7 +414,7 @@ else if (voice=="hi" || voice=="hello") {
   speech.pitch = 1.8;
 }  
 else if (message.includes("what is your name")) {
-  speech.text = "my name is sumi";
+  speech.text = "my name is somaia";
     speech.volume = 1;
     speech.rate = 0.84;
     speech.pitch = 1.4;
