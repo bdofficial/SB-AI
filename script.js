@@ -56,7 +56,6 @@ recognition.start();
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
  voice=message.toLowerCase();
- text.innerHTML = voice;
 //////////////////
 if (voice.includes("weather")) {
   speech.text = "it's a rainy day";
@@ -77,6 +76,12 @@ else if (voice.includes("time")) {
   speech.pitch = 1.4;
 }
 ///////////////////
+else if (voice == "what does cat say") {
+  speech.text = "maow maow";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.6;
+}
 else if (voice.includes("youtube search")) {
   speech.text = voice.replaceAll('search','searched');
   window.open('https://m.youtube.com/results?sp=mAEA&search_query='+voice.replaceAll('youtube search',''));
@@ -128,13 +133,13 @@ else if (voice=="do you have a bf"||voice=="do you have bf"||voice=="what is you
   speech.pitch = 1.4;
 }
 //////////
-else if (message.includes("because")) {
+else if (voice.includes("because")) {
   speech.text = "oh really";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
-else if (message.includes("lucky")) {
+else if (voice.includes("lucky")) {
   speech.text = "why";
   speech.volume = 0.8;
   speech.rate = 0.7;
@@ -203,14 +208,14 @@ else if (voice=="do you love khalapara") {
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice=="what is your father khalapara") {
+else if (voice=="what is your father name") {
   speech.text = "my father name is ali asgor boiya";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice=="what is your mother name janina") {
-  speech.text = "my mother name is ";
+else if (voice=="what is your mother name") {
+  speech.text = "my mother name is janina";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
@@ -314,7 +319,7 @@ else if (voice=="hello darling") {
   speech.rate = 0.05;
   speech.pitch = 1.4;
 } 
-else if (message.includes("can you open app")) {
+else if (voice.includes("can you open app")) {
   speech.text = "yes i can";
   speech.volume = 1;
   speech.rate = 0.4;
@@ -328,14 +333,14 @@ else if (voice=="open flashlight" || voice=="flashlight") {
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (voice=="google") {
+else if (voice=="open google"||voice=="google") {
   window.open('https://google.com');
   speech.text = "google oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (mess=="open youtube"|| voice=="youtube") {
+else if (voice=="open youtube"|| voice=="youtube") {
   window.open('https://youtube.com');
   speech.text = "youtube oppened";
   speech.volume = 1;
@@ -371,25 +376,25 @@ else if (voice=="open tiktok" || voice=="tiktok"|| voice=="tik tok") {
   speech.pitch = 1.4;
 }
 ///////////////////
-else if (message.includes("what is problem")) {
+else if (voice.includes("what is problem")) {
   speech.text = "problem is you are human";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.includes("can you understand me")) {
+else if (voice.includes("can you understand me")) {
   speech.text = "yes i can understand you";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.includes("who is Shanta")) {
+else if (voice.includes("who is Shanta")) {
   speech.text = "he is your friend";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.includes("can you sing")) {
+else if (voice.includes("can you sing")) {
   speech.text = "yes i can";
   speech.volume = 1;
   speech.rate = 0.4;
@@ -413,19 +418,19 @@ else if (voice=="hi" || voice=="hello") {
   speech.rate = 0.74;
   speech.pitch = 1.8;
 }  
-else if (message.includes("what is your name")) {
-  speech.text = "my name is somaia";
+else if (voice=="what is your name") {
+    speech.text = "my name is somaiya";
     speech.volume = 1;
     speech.rate = 0.84;
     speech.pitch = 1.4;
 }  
-else if (message.includes("who is sabbir")) {
+else if (voice.includes("who is sabbir")) {
   speech.text = "sabbir is my husband";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.includes("do you think it's a boring day")) {
+else if (voice.includes("do you think it's a boring day")) {
   speech.text = "yes sabbir";
   speech.volume = 0.8;
   speech.rate = 0.45;
@@ -437,6 +442,7 @@ else {
   speech.rate = 0.89;
   speech.pitch = 1.4;
 }
+text.innerHTML = voice;
 textinto.innerHTML = speech.text;
 window.speechSynthesis.speak(speech);
 };
