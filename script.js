@@ -17,7 +17,7 @@ listenBtn.addEventListener('mouseover', (e) => {
   const msg = new SpeechSynthesisUtterance(
     timesay
   );
-  msg.volume = 0.8;
+  msg.volume = 1;
   msg.rate = 0.7;
   msg.pitch = 1.4;
   window.speechSynthesis.speak(msg);
