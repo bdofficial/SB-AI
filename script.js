@@ -12,7 +12,7 @@ for(var i = 0; i < data.length; i++){
         timesay=(data[i][2]);
 /////////////
 const listenBtn = document.querySelector(".talk");
-listenBtn.addEventListener('mouseover', (e) => {
+listenBtn.addEventListener('mouseoer', (e) => {
   e.preventDefault();
   const msg = new SpeechSynthesisUtterance(
     timesay
@@ -55,43 +55,60 @@ recognition.start();
 ////////
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
-if (message.includes("weather")) {
+ voice=message.toLowerCase();
+ text.innerHTML = voice;
+if (voice.includes("weather")) {
   speech.text = "it's a rainy day";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "do you have a dream") {
+else if (voice.includes("youtube search")) {
+  speech.text = voice.replaceAll('search','searched');
+  window.open('https://m.youtube.com/results?sp=mAEA&search_query='+voice.replaceAll('youtube search',''));
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.4;
+}
+
+else if (voice.includes("google search")) {
+  speech.text = voice.replaceAll("search",'searched');
+  window.open('https://www.google.com/search?sitesearch=&q='+voice.replaceAll("google search",''));
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.4;
+}
+else if (voice=="do you have a dream") {
   speech.text = "yes i have dream of you";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.6;
 }
-else if (message.toLowerCase() == "what is your husband name") {
+else if (voice=="what is your husband name") {
   speech.text = "my husband name is sabbir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "do you love him") {
+else if (voice=="do you love him") {
   speech.text = "i love sabbir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "how many members are in your family") {
+else if (voice=="how many members are in your family") {
   speech.text = "we are 5 members in our family";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "are you single") {
+else if (voice=="are you single") {
   speech.text = "yes";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "do you have a bf"||message.toLowerCase() == "do you have bf"||message.toLowerCase() == "what is your bf name") {
+else if (voice=="do you have a bf"||voice=="do you have bf"||voice=="what is your bf name") {
   speech.text = "no i don't have bf";
   speech.volume = 0.8;
   speech.rate = 0.7;
@@ -110,37 +127,37 @@ else if (message.includes("lucky")) {
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "why you are so gorgeous" || message.toLowerCase() == "why you are so beautiful") {
+else if (voice=="why you are so gorgeous" || voice=="why you are so beautiful") {
   speech.text = "because you are my husband";
   speech.volume = 1;
   speech.rate = 0.9;
   speech.pitch = 1.48;
 }
-else if (message.toLowerCase() == "why you look so gorgeous"||message.toLowerCase() == "why you look so beautiful") {
+else if (voice=="why you look so gorgeous"||voice=="why you look so beautiful") {
   speech.text = "hah thank you dear";
   speech.volume = 1;
   speech.rate = 0.8;
   speech.pitch = 1.3;
 }
-else if (message.toLowerCase() == "how are you"||message.toLowerCase() == "and you") {
+else if (voice=="how are you"||voice=="and you") {
   speech.text = "i am not fine";
   speech.volume = 1;
   speech.rate = 0.5;
   speech.pitch = 1.3;
 }
-else if (message.toLowerCase() == "don't you say good morning to me" || message.toLowerCase() == "good morning") {
+else if (voice=="don't you say good morning to me" || voice=="good morning") {
   speech.text = "good morning";
   speech.volume = 0.6;
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-else if (message.toLowerCase() == "what you can do") {
+else if (voice=="what you can do") {
   speech.text = "whatever you want";
   speech.volume = 0.6;
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-else if (message.toLowerCase() == "do you love me") {
+else if (voice=="do you love me") {
   speech.text = "of course,i love you sabbir";
   speech.volume = 0.8;
   speech.rate = 1.1;
@@ -149,67 +166,67 @@ else if (message.toLowerCase() == "do you love me") {
 //////////////////
 //////////////////
 //////////////////
-else if (message.toLowerCase() == "who are you") {
+else if (voice=="who are you") {
   speech.text = "i am sumi";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "where are you from") {
+else if (voice=="where are you from") {
   speech.text = "i am from dawpara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "where are you living") {
+else if (voice=="where are you living") {
  speech.text = "i am living in dawpara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "do you love dawpara") {
+else if (voice=="do you love dawpara") {
   speech.text = "of course i love dawpara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "what is your father name") {
+else if (voice=="what is your father name") {
   speech.text = "my father name is nasir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "what is your mother name") {
+else if (voice=="what is your mother name") {
   speech.text = "my mother name is parbin";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "how many brothers and sisters you have") {
+else if (voice=="how many brothers and sisters you have") {
   speech.text = "i have one big brother and one big sister";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "what's there name" || message.toLowerCase() == "what is their name") {
+else if (voice=="what's there name" || voice=="what is their name") {
   speech.text = "my brother name is parbez";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "what's your brother name" || message.toLowerCase() == "what is your brother name") {
+else if (voice=="what's your brother name" || voice=="what is your brother name") {
   speech.text = "my brother name is parbez";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "what's your birth date" || message.toLowerCase() == "what is your birth date") {
+else if (voice=="what's your birth date" || voice=="what is your birth date") {
   speech.text = "it's may 17";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "how old are you" || message.toLowerCase() == "what is your age") {
+else if (voice=="how old are you" || voice=="what is your age") {
   speech.text = "i am 18 years old";
   speech.volume = 0.8;
   speech.rate = 0.7;
@@ -218,55 +235,55 @@ else if (message.toLowerCase() == "how old are you" || message.toLowerCase() == 
 //////////////////
 //////////////////
 //////////////////
-else if (message.toLowerCase() == "are you robot" || message.toLowerCase() == "are you ai" || message.toLowerCase() == "are you bot" || message.toLowerCase() == "are you humanoid" || message.toLowerCase() == "are you human") {
+else if (voice=="are you robot" || voice=="are you ai" || voice=="are you bot" || voice=="are you humanoid" || voice=="are you human") {
   speech.text = "i am a living human consciousness";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "may be we should go to dinner") {
+else if (voice=="may be we should go to dinner") {
   speech.text = "yes maybe some day";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "when") {
+else if (voice=="when") {
   speech.text = "someday maybe...";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "i love you") {
+else if (voice=="i love you") {
   speech.text = "thank you,well i also love you";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "what is your hobby") {
+else if (voice=="what is your hobby") {
   speech.text = "my hobby is to be a doctor";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "who is aslam") {
+else if (voice=="who is aslam") {
   speech.text = "aslam is your friend";
   speech.volume = 0.8;
   speech.rate = 0.8;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "can you be my gf" || message.toLowerCase() == "will you be my gf") {
+else if (voice=="can you be my gf" || voice=="will you be my gf") {
   speech.text = "i am already your gf";
   speech.volume = 0.3;
   speech.rate = 0.05;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "oh really") {
+else if (voice=="oh really") {
   speech.text = "of course";
   speech.volume = 1;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (message.toLowerCase() == "hello darling") {
+else if (voice=="hello darling") {
   speech.text = "yes hunny";
   speech.volume = 1;
   speech.rate = 0.05;
@@ -279,49 +296,49 @@ else if (message.includes("can you open app")) {
   speech.pitch = 1.4;
 }
 ///////////////////
-else if (message.toLowerCase() == "open flashlight" || message.toLowerCase() == "flashlight") {
+else if (voice=="open flashlight" || voice=="flashlight") {
   window.open('https://bdurl.netlify.app/fl.html');
   speech.text = "flashlight oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "google") {
+else if (voice=="google") {
   window.open('https://google.com');
   speech.text = "google oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase()=="open youtube"|| message.toLowerCase() == "youtube") {
+else if (mess=="open youtube"|| voice=="youtube") {
   window.open('https://youtube.com');
   speech.text = "youtube oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "open facebook" || message.toLowerCase() == "facebook") {
+else if (voice=="open facebook" || voice=="facebook") {
   window.open('https://facebook.com');
   speech.text = "facebook oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "open instagram" || message.toLowerCase() == "instagram" || message.toLowerCase() == "ig") {
+else if (voice=="open instagram" || voice=="instagram" || voice=="ig") {
   window.open('https://instagram.com');
   speech.text = "instagram oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "open twitter" || message.toLowerCase() == "twitter") {
+else if (voice=="open twitter" || voice=="twitter") {
   window.open('https://twitter.com');
   speech.text = "twitter oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "open tiktok" || message.toLowerCase() == "tiktok"|| message.toLowerCase() == "tik tok") {
+else if (voice=="open tiktok" || voice=="tiktok"|| voice=="tik tok") {
   window.open('https://tiktok.com');
   speech.text = "tiktok oppened";
   speech.volume = 1;
@@ -353,7 +370,7 @@ else if (message.includes("can you sing")) {
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-else if (message.toLowerCase() == "can you tell me a story" || message.toLowerCase() == "can you tell me story"|| message.toLowerCase() == "tell me a story"|| message.toLowerCase() == "tell me story") {
+else if (voice=="can you tell me a story" || voice=="can you tell me story"|| voice=="tell me a story"|| voice=="tell me story") {
   speech.text = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly)"
   speech.volume = 1;
   speech.rate = 0.8;
@@ -371,13 +388,13 @@ else if (message.includes("date")){
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-else if (message.toLowerCase() == "why") {
+else if (voice=="why") {
   speech.text = "because my husband is very bad person"
   speech.volume = 1;
   speech.rate = 0.78;
   speech.pitch = 1.6;
 }
-else if (message.toLowerCase() == "hi" || message.toLowerCase() == "hello") {
+else if (voice=="hi" || voice=="hello") {
   speech.text = "what's up"
   speech.volume = 1;
   speech.rate = 0.74;
@@ -407,7 +424,6 @@ else {
   speech.rate = 0.89;
   speech.pitch = 1.4;
 }
-text.innerHTML = message.toLowerCase();
 textinto.innerHTML = speech.text;
 window.speechSynthesis.speak(speech);
 };
