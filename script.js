@@ -12,7 +12,7 @@ for(var i = 0; i < data.length; i++){
         timesay=(data[i][2]);
 /////////////
 const listenBtn = document.querySelector(".talk");
-listenBtn.addEventListener('mouseoer', (e) => {
+listenBtn.addEventListener('mouseover', (e) => {
   e.preventDefault();
   const msg = new SpeechSynthesisUtterance(
     timesay
@@ -56,9 +56,10 @@ recognition.start();
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
  voice=message.toLowerCase();
+ text.innerHTML = voice;
 //////////////////
 if (voice.includes("weather")) {
-  speech.text = "it's a rainy day";
+  speech.text = "it's a cloudy day";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
@@ -442,7 +443,6 @@ else {
   speech.rate = 0.89;
   speech.pitch = 1.4;
 }
-text.innerHTML = voice;
 textinto.innerHTML = speech.text;
 window.speechSynthesis.speak(speech);
 };
