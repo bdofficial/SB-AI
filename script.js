@@ -186,12 +186,54 @@ if (sss.value=="what is your husband name") {
   speech.pitch = 1.5;
 }
 else if (sss.value.includes("who is sabbir")) {
-  bbb.value = "sabbir is my husband";
+  bbb.value = "my husband name is sabbir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="do you love him" & bbb.value == "my husband name is sabbir"||bbb.value =="sabbir is my husband") {
+else if (sss.value == "how many members are in your husband family"
+||sss.value == "how many members are in his family" & bbb.value == "my husband name is sabbir") {
+bbb.value = "he have 6 members";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "what is your husband family members name"
+ ||sss.value == "what is their name" & bbb.value == "he have 6 members") {
+bbb.value = "his father abdul awal,his mother hasina begum,his big brother tanvir alam,his little sister abida sultana and his wife me";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "what is your husband father's name" 
+ ||sss.value == "what is his father's name" & bbb.value == "my husband name is sabbir") {
+bbb.value = "my husband's father name is abdul awal";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "what is your husband's mother name" 
+ ||sss.value == "what is his mother name" & bbb.value == "my husband name is sabbir") {
+bbb.value = "her name is hasina begum";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "what is your husband's brother name"
+ ||sss.value == "what is his brother name" & bbb.value == "my husband name is sabbir") {
+bbb.value = "my husband's brother name is tanvir";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "what is your husband's sister name"
+ ||sss.value == "what is his sister name" & bbb.value == "my husband name is sabbir") {
+bbb.value = "her name is abida sultana";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value=="do you love him" & bbb.value == "my husband name is sabbir") {
   bbb.value = "yes";
   speech.volume = 0.8;
   speech.rate = 0.7;
@@ -280,6 +322,7 @@ if (sss.value=="do you love khalapara") {
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
+/////////////
 if (sss.value=="what is your father name") {
   bbb.value = "my father name is ali asgor boiya";
   speech.volume = 0.8;
@@ -294,13 +337,12 @@ if (sss.value=="what is your mother name") {
 }
 /////////////
 if (sss.value == "how many members are in your family") {
-  bbb.value = "we are 5 members in our family";
+  bbb.value = "we are 7 members in our family";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what's there name" & bbb.value == "we are 5 members in our family" ||
-  sss.value == "what is their name" & bbb.value == "we are 5 members in our family") {
+else if (sss.value == "what is their name" & bbb.value == "we are 5 members in our family") {
   bbb.value = "my father name is ali asgor,my mother name is janina,my brothers name is sagor and raki,my sirter name is boro bone";
   speech.volume = 0.8;
   speech.rate = 0.7;
@@ -328,7 +370,6 @@ else if (sss.value == "who is smallest in your family"
 }
 else if (sss.value=="what is your brother and sister name"
  ||sss.value=="what is your brothers and sisters name"
- ||sss.value=="what's there name" & bbb.value == "i have tow big brothers and tow big sisters"
  || sss.value=="what is their name" & bbb.value == "i have tow big brothers and tow big sisters") {
   bbb.value = "there name is rakib,sagor,joma and boro bone";
   speech.volume = 0.8;
@@ -341,21 +382,27 @@ else if (sss.value == "what is your brothers name" || sss.value == "what is your
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="what's your big brother name is" || sss.value=="what is your big brother name") {
+else if (sss.value=="what is your big brother name") {
   bbb.value = "my big brother name is rakib";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what's your small brother name" || sss.value == "what is your small brother name") {
+else if (sss.value == "what is your small brother name") {
   bbb.value = "my small brother name is sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 /////////
-if (sss.value=="what's your birth date" || sss.value=="what is your birth date") {
-  bbb.value = "it's september 30";
+if (sss.value=="what is your birth date") {
+  bbb.value = "it's July 30";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "when is your marriage anniversary") {
+  bbb.value = "it's on october 3rd";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
