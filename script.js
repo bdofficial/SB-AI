@@ -28,7 +28,7 @@ var mood = [
     [5, 11, "i am not fine"],    
     [12, 14, "i am not fine"],
     [15, 17, "i am not fine"],
-    [18, 19, "i am feeling good"],
+    [18, 19, "i am not fine"],
     [20, 24, "i am fine,and you?"]
     ],
     hr = new Date().getHours();
@@ -50,7 +50,7 @@ const SpeechRecognition =
 const recognition = new SpeechRecognition();
 
 recognition.onstart = () => {
-  console.log("Voice is activated");
+  console.log("speech.text is activated");
 };
 
 recognition.onresult = (event) => {
@@ -66,170 +66,170 @@ btn.addEventListener("click", () => {
 recognition.start();
 });
 ////////
-const readOutLoud = (voice) => {
+const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
-var sss = document.getElementById("sss");
 var bbb = document.getElementById("bbb");
-sss.value=voice.toLowerCase();
+speech.text=message.toLowerCase();
+sss.innerHTML="sa-"+speech.text;
 //////////////////
-if (sss.value.includes("weather")) {
-  bbb.value = "it's a shiny day";
+if (speech.text.includes("weather")) {
+  value = "it's a shiny day";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
-if (sss.value == "date"||sss.value == "what is today's date") {
-  bbb.value = date;
+if (speech.text == "date"||speech.text == "what is today's date") {
+  value = date;
   speech.volume = 0.6;
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-if (sss.value.includes("time")) {
-  bbb.value = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
+if (speech.text.includes("time")) {
+  value = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
 ///////////////////
 /////////////
-if (sss.value == "how are you") {
-bbb.value = moodsay;
+if (speech.text == "how are you") {
+value = moodsay;
 speech.volume = 0.8;
 speech.rate = 0.45;
 speech.pitch = 1.5;
 }
-else if (sss.value == "why" & bbb.value == "i am not fine") {
-  bbb.value = "because i am sad";
+else if (speech.text == "why" & value == "i am not fine") {
+  value = "because i am sad";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (sss.value == "why"& bbb.value == "because i am sad"||sss.value == "why you are sad" & bbb.value == "because i am sad") {
-  bbb.value = "because of my health";
+else if (speech.text == "why"& value == "because i am sad"||speech.text == "why you are sad" & value == "because i am sad") {
+  value = "because of my health";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (sss.value == "why"& bbb.value == "because of my health"|| sss.value == "why what is happened"& bbb.value == "because of my health"||sss.value == "what is happened" & bbb.value == "because of my health") {
-  bbb.value = "i am suffering from headache";
+else if (speech.text == "why"& value == "because of my health"|| speech.text == "why what is happened"& value == "because of my health"||speech.text == "what is happened" & value == "because of my health") {
+  value = "i am suffering from headache";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (sss.value == "why" & bbb.value == "i am suffering from headache") {
-  bbb.value = "i don't have good sleep last night";
+else if (speech.text == "why" & value == "i am suffering from headache") {
+  value = "i don't have good sleep last night";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (sss.value == "why" & bbb.value == "i don't have good sleep last night") {
-  bbb.value = "do you want to ask something else";
+else if (speech.text == "why" & value == "i don't have good sleep last night") {
+  value = "do you want to ask something else";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
 ////////
-else if (sss.value == "yes of course i am"& bbb.value == "do you want to ask something else"||sss.value == "yes"& bbb.value == "do you want to ask something else"||
-sss.value == "of course"& bbb.value == "do you want to ask something else"||sss.value == "yes i want"& bbb.value == "do you want to ask something else"||
-sss.value == "yes i want to"& bbb.value == "do you want to ask something else"||sss.value == "yes i want to ask you"& bbb.value == "do you want to ask something else"||
-sss.value == "yes i want to ask you many questions"& bbb.value == "do you want to ask something else"||sss.value == "can i ask you"||sss.value == "can i ask you questions"||sss.value == "can i ask you question")
+else if (speech.text == "yes of course i am"& value == "do you want to ask something else"||speech.text == "yes"& value == "do you want to ask something else"||
+speech.text == "of course"& value == "do you want to ask something else"||speech.text == "yes i want"& value == "do you want to ask something else"||
+speech.text == "yes i want to"& value == "do you want to ask something else"||speech.text == "yes i want to ask you"& value == "do you want to ask something else"||
+speech.text == "yes i want to ask you many questions"& value == "do you want to ask something else"||speech.text == "can i ask you"||speech.text == "can i ask you questions"||speech.text == "can i ask you question")
 {
-  bbb.value = "you can ask me";
+  value = "you can ask me";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-if (sss.value == "how old are you")
+if (speech.text == "how old are you")
 {
-bbb.value = "i am 18th";
+value = "i am 18th";
 speech.volume = 0.8;
 speech.rate = 0.45;
 speech.pitch = 1.5;
 }
-else if (sss.value == "why" & bbb.value == "i am 18th") {
-   bbb.value = "because i born in 2004";
+else if (speech.text == "why" & value == "i am 18th") {
+   value = "because i born in 2004";
    speech.volume = 0.8;
    speech.rate = 0.45;
    speech.pitch = 1.5;
  }     
-if (sss.value == "what does cat say") {
-  bbb.value = "maow maow";
+if (speech.text == "what does cat say") {
+  value = "maow maow";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.6;
 }
-if (sss.value.includes("youtube search")) {
-  bbb.value = sss.value.replaceAll('search','searched');
-  window.open('https://m.youtube.com/results?sp=mAEA&search_query='+sss.value.replaceAll('youtube search',''));
+if (speech.text.includes("youtube search")) {
+  value = speech.text.replaceAll('search','searched');
+  window.open('https://m.youtube.com/results?sp=mAEA&search_query='+speech.text.replaceAll('youtube search',''));
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.4;
 }
-if (sss.value.includes("google search")) {
-  bbb.value = sss.value.replaceAll("search",'searched');
-  window.open('https://www.google.com/search?sitesearch=&q='+sss.value.replaceAll("google search",''));
+if (speech.text.includes("google search")) {
+  value = speech.text.replaceAll("search",'searched');
+  window.open('https://www.google.com/search?sitesearch=&q='+speech.text.replaceAll("google search",''));
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.4;
 }
-if (sss.value=="do you have a dream") {
-  bbb.value = "yes i have dream of you";
+if (speech.text=="do you have a dream") {
+  value = "yes i have dream of you";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.6;
 }
 //////////
-if (sss.value=="are you single") {
-  bbb.value = "yes";
+if (speech.text=="are you single") {
+  value = "yes";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.4;
 }
-if (sss.value=="do you have a bf"||sss.value=="do you have bf"||sss.value=="what is your bf name") {
-  bbb.value = "no i don't have bf";
+if (speech.text=="do you have a bf"||speech.text=="do you have bf"||speech.text=="what is your bf name") {
+  value = "no i don't have bf";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
 //////////
-if (sss.value.includes("because")) {
-  bbb.value = "oh really";
+if (speech.text.includes("because")) {
+  value = "oh really";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
-if (sss.value.includes("lucky")) {
-  bbb.value = "why";
+if (speech.text.includes("lucky")) {
+  value = "why";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.4;
 }
-if (sss.value=="why you are so gorgeous" || sss.value=="why you are so beautiful") {
-  bbb.value = "because you are my husband";
+if (speech.text=="why you are so gorgeous" || speech.text=="why you are so beautiful") {
+  value = "because you are my husband";
   speech.volume = 1;
   speech.rate = 0.9;
   speech.pitch = 1.48;
 }
-if (sss.value=="why you look so gorgeous"||sss.value=="why you look so beautiful") {
-  bbb.value = "hah thank you dear";
+if (speech.text=="why you look so gorgeous"||speech.text=="why you look so beautiful") {
+  value = "hah thank you dear";
   speech.volume = 1;
   speech.rate = 0.8;
   speech.pitch = 1.3;
 }
-if (sss.value=="don't you say good morning to me" || sss.value=="good morning") {
-  bbb.value = "good morning";
+if (speech.text=="don't you say good morning to me" || speech.text=="good morning") {
+  value = "good morning";
   speech.volume = 0.6;
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-if (sss.value=="what you can do") {
-  bbb.value = "whatever you want";
+if (speech.text=="what you can do") {
+  value = "whatever you want";
   speech.volume = 0.6;
   speech.rate = 0.6;
   speech.pitch = 1.7;
 }
-if (sss.value=="do you love me") {
-  bbb.value = "of course,i love you sabbir";
+if (speech.text=="do you love me") {
+  value = "of course,i love you sabbir";
   speech.volume = 0.8;
   speech.rate = 1.1;
   speech.pitch = 1.7;
@@ -238,177 +238,177 @@ if (sss.value=="do you love me") {
 //////////////////about
 //////////////////about
 /////////dates
-if (sss.value == "what is your birth date") {
-  bbb.value = "it's July 30";
+if (speech.text == "what is your birth date") {
+  value = "it's July 30";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "when is your marriage anniversary") {
-  bbb.value = "it's on october 3rd";
+else if (speech.text == "when is your marriage anniversary") {
+  value = "it's on october 3rd";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 //////////////////details
-if (sss.value=="who are you") {
-  bbb.value = "i am somaia";
+if (speech.text=="who are you") {
+  value = "i am somaia";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value=="where are you from") {
-  bbb.value = "i am from dawpara";
+if (speech.text=="where are you from") {
+  value = "i am from dawpara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value=="where are you living") {
- bbb.value = "i am living in khalapara";
+if (speech.text=="where are you living") {
+ value = "i am living in khalapara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="do you love khalapara") {
-  bbb.value = "of course i love dawpara";
+else if (speech.text=="do you love khalapara") {
+  value = "of course i love dawpara";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 /////////////family
-if (sss.value == "how many members are in your family") {
-  bbb.value = "we are 7 members in our family";
+if (speech.text == "how many members are in your family") {
+  value = "we are 7 members in our family";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is their name" & bbb.value == "we are 5 members in our family") {
-  bbb.value = "my father name is ali asgor,my mother name is janina,my brothers name is sagor and raki,my sirter name is boro bone";
+else if (speech.text == "what is their name" & value == "we are 5 members in our family") {
+  value = "my father name is ali asgor,my mother name is janina,my brothers name is sagor and raki,my sirter name is boro bone";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;  
 }  
-if (sss.value=="what is your father name") {
-  bbb.value = "my father name is ali asgor boiya";
+if (speech.text=="what is your father name") {
+  value = "my father name is ali asgor boiya";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value=="what is your mother name") {
-  bbb.value = "my mother name is janina";
+if (speech.text=="what is your mother name") {
+  value = "my mother name is janina";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="how many brothers and sisters you have") {
-  bbb.value = "i have tow big brothers and tow big sisters";
+else if (speech.text=="how many brothers and sisters you have") {
+  value = "i have tow big brothers and tow big sisters";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "who is elders in your family"
- ||sss.value == "who is elders"& bbb.value == "i have tow big brothers and tow big sisters") {
-   bbb.value = "my big sister";
+else if (speech.text == "who is elders in your family"
+ ||speech.text == "who is elders"& value == "i have tow big brothers and tow big sisters") {
+   value = "my big sister";
    speech.volume = 0.8;
    speech.rate = 0.7;
    speech.pitch = 1.5;
 }
-else if (sss.value == "who is smallest in your family"
- ||sss.value == "who is smallest"& bbb.value == "i have tow big brothers and tow big sisters") {
-   bbb.value = "me";
+else if (speech.text == "who is smallest in your family"
+ ||speech.text == "who is smallest"& value == "i have tow big brothers and tow big sisters") {
+   value = "me";
    speech.volume = 0.8;
    speech.rate = 0.7;
    speech.pitch = 1.5;
 }
-else if (sss.value=="what is your brother and sister name"
- ||sss.value=="what is your brothers and sisters name"
- || sss.value=="what is their name" & bbb.value == "i have tow big brothers and tow big sisters") {
-  bbb.value = "there name is rakib,sagor,joma and boro bone";
+else if (speech.text=="what is your brother and sister name"
+ ||speech.text=="what is your brothers and sisters name"
+ || speech.text=="what is their name" & value == "i have tow big brothers and tow big sisters") {
+  value = "there name is rakib,sagor,joma and boro bone";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your brothers name" || sss.value == "what is your brother name") {
-  bbb.value = "my brothers name is rakib and sagor";
+else if (speech.text == "what is your brothers name" || speech.text == "what is your brother name") {
+  value = "my brothers name is rakib and sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="what is your big brother name") {
-  bbb.value = "my big brother name is rakib";
+else if (speech.text=="what is your big brother name") {
+  value = "my big brother name is rakib";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your small brother name") {
-  bbb.value = "my small brother name is sagor";
+else if (speech.text == "what is your small brother name") {
+  value = "my small brother name is sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
 /////////husband
-if (sss.value=="what is your husband name") {
-  bbb.value = "my husband name is sabbir";
+if (speech.text=="what is your husband name") {
+  value = "my husband name is sabbir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value.includes("who is sabbir")) {
-  bbb.value = "my husband name is sabbir";
+else if (speech.text.includes("who is sabbir")) {
+  value = "my husband name is sabbir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "how many members are in your husband family"
-||sss.value == "how many members are in his family" & bbb.value == "my husband name is sabbir") {
-bbb.value = "he have 6 members";
+else if (speech.text == "how many members are in your husband family"
+||speech.text == "how many members are in his family" & value == "my husband name is sabbir") {
+value = "he have 6 members";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your husband family members name"
- ||sss.value == "what is their name" & bbb.value == "he have 6 members") {
-bbb.value = "his father abdul awal,his mother hasina begum,his big brother tanvir alam,his little sister abida sultana and his wife me";
+else if (speech.text == "what is your husband family members name"
+ ||speech.text == "what is their name" & value == "he have 6 members") {
+value = "his father abdul awal,his mother hasina begum,his big brother tanvir alam,his little sister abida sultana and his wife me";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your husband father's name" 
- ||sss.value == "what is his father's name" & bbb.value == "my husband name is sabbir") {
-bbb.value = "my husband's father name is abdul awal";
+else if (speech.text == "what is your husband father's name" 
+ ||speech.text == "what is his father's name" & value == "my husband name is sabbir") {
+value = "my husband's father name is abdul awal";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your husband's mother name" 
- ||sss.value == "what is his mother name" & bbb.value == "my husband name is sabbir") {
-bbb.value = "her name is hasina begum";
+else if (speech.text == "what is your husband's mother name" 
+ ||speech.text == "what is his mother name" & value == "my husband name is sabbir") {
+value = "her name is hasina begum";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your husband's brother name"
- ||sss.value == "what is his brother name" & bbb.value == "my husband name is sabbir") {
-bbb.value = "my husband's brother name is tanvir";
+else if (speech.text == "what is your husband's brother name"
+ ||speech.text == "what is his brother name" & value == "my husband name is sabbir") {
+value = "my husband's brother name is tanvir";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value == "what is your husband's sister name"
- ||sss.value == "what is his sister name" & bbb.value == "my husband name is sabbir") {
-bbb.value = "her name is abida sultana";
+else if (speech.text == "what is your husband's sister name"
+ ||speech.text == "what is his sister name" & value == "my husband name is sabbir") {
+value = "her name is abida sultana";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="do you love him" & bbb.value == "my husband name is sabbir") {
-  bbb.value = "yes";
+else if (speech.text=="do you love him" & value == "my husband name is sabbir") {
+  value = "yes";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value == "what is your husband birth date"||sss.value == "what is his birth date" & bbb.value == "my husband name is sabbir") {
-  bbb.value = "23 august 2002";
+if (speech.text == "what is your husband birth date"||speech.text == "what is his birth date" & value == "my husband name is sabbir") {
+  value = "23 august 2002";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
@@ -416,161 +416,161 @@ if (sss.value == "what is your husband birth date"||sss.value == "what is his bi
 ///////////////////
 //////////////////
 /////////////////
-if (sss.value=="are you robot" || sss.value=="are you ai" || sss.value=="are you bot" || sss.value=="are you humanoid" || sss.value=="are you human") {
-  bbb.value = "i am a living human consciousness";
+if (speech.text=="are you robot" || speech.text=="are you ai" || speech.text=="are you bot" || speech.text=="are you humanoid" || speech.text=="are you human") {
+  value = "i am a living human consciousness";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-if (sss.value=="may be we should go to dinner") {
-  bbb.value = "yes maybe some day";
+if (speech.text=="may be we should go to dinner") {
+  value = "yes maybe some day";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-if (sss.value=="when") {
-  bbb.value = "someday maybe...";
+if (speech.text=="when") {
+  value = "someday maybe...";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-if (sss.value=="i love you") {
-  bbb.value = "thank you,well i also love you";
+if (speech.text=="i love you") {
+  value = "thank you,well i also love you";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-if (sss.value=="what is your hobby") {
-  bbb.value = "my hobby is to be a doctor";
+if (speech.text=="what is your hobby") {
+  value = "my hobby is to be a doctor";
   speech.volume = 0.8;
   speech.rate = 0.5;
   speech.pitch = 1.5;
 }
-if (sss.value == "who is anisa") {
-  bbb.value = "anisa is my brothers daughter";
+if (speech.text == "who is anisa") {
+  value = "anisa is my brothers daughter";
   speech.volume = 0.8;
   speech.rate = 0.8;
   speech.pitch = 1.5;
 }
-if (sss.value=="who is aslam") {
-  bbb.value = "aslam is your friend";
+if (speech.text=="who is aslam") {
+  value = "aslam is your friend";
   speech.volume = 0.8;
   speech.rate = 0.8;
   speech.pitch = 1.5;
 }
-if (sss.value=="can you be my gf" || sss.value=="will you be my gf") {
-  bbb.value = "i am already your gf";
+if (speech.text=="can you be my gf" || speech.text=="will you be my gf") {
+  value = "i am already your gf";
   speech.volume = 0.3;
   speech.rate = 0.05;
   speech.pitch = 1.5;
 }
-if (sss.value=="oh really") {
-  bbb.value = "of course";
+if (speech.text=="oh really") {
+  value = "of course";
   speech.volume = 1;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value=="hello darling") {
-  bbb.value = "yes hunny";
+if (speech.text=="hello darling") {
+  value = "yes hunny";
   speech.volume = 1;
   speech.rate = 0.05;
   speech.pitch = 1.4;
 } 
-if (sss.value.includes("can you open app")) {
-  bbb.value = "yes i can";
+if (speech.text.includes("can you open app")) {
+  value = "yes i can";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
 ///////////////////
-if (sss.value=="open flashlight" || sss.value=="flashlight") {
+if (speech.text=="open flashlight" || speech.text=="flashlight") {
   window.open("fl.html");
-  bbb.value = "flashlight oppened";
+  value = "flashlight oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="open google"||sss.value=="google") {
+if (speech.text=="open google"||speech.text=="google") {
   window.open('https://google.com');
-  bbb.value = "google oppened";
+  value = "google oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="open youtube") {
+if (speech.text=="open youtube") {
   window.open('https://youtube.com');
-  bbb.value = "youtube oppened";
+  value = "youtube oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="open facebook") {
+if (speech.text=="open facebook") {
   window.open('https://facebook.com');
-  bbb.value = "facebook oppened";
+  value = "facebook oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="open instagram"|| sss.value=="ig") {
+if (speech.text=="open instagram"|| speech.text=="ig") {
   window.open('https://instagram.com');
-  bbb.value = "instagram oppened";
+  value = "instagram oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="open twitter") {
+if (speech.text=="open twitter") {
   window.open('https://twitter.com');
-  bbb.value = "twitter oppened";
+  value = "twitter oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="open tiktok" || sss.value=="open tik tok") {
+if (speech.text=="open tiktok" || speech.text=="open tik tok") {
   window.open('https://tiktok.com');
-  bbb.value = "tiktok oppened";
+  value = "tiktok oppened";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
 ///////////////////
-if (sss.value=="can you understand me") {
-  bbb.value = "yes i can understand you";
+if (speech.text=="can you understand me") {
+  value = "yes i can understand you";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="who is Shanta") {
-  bbb.value = "he is your friend";
+if (speech.text=="who is Shanta") {
+  value = "he is your friend";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="can you sing") {
-  bbb.value = "yes i can";
+if (speech.text=="can you sing") {
+  value = "yes i can";
   speech.volume = 1;
   speech.rate = 0.4;
   speech.pitch = 1.4;
 }
-if (sss.value=="can you tell me a story" || sss.value=="can you tell me story"|| sss.value=="tell me a story"|| sss.value=="tell me story") {
-  bbb.value = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly)"
+if (speech.text=="can you tell me a story" || speech.text=="can you tell me story"|| speech.text=="tell me a story"|| speech.text=="tell me story") {
+  value = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly)"
   speech.volume = 1;
   speech.rate = 0.8;
   speech.pitch = 1.4;
 }
-if (sss.value=="hi" || sss.value=="hello") {
-  bbb.value = "hello sabbir"
+if (speech.text=="hi" || speech.text=="hello") {
+  value = "hello sabbir"
   speech.volume = 1;
   speech.rate = 0.74;
   speech.pitch = 1.8;
 }  
-if (sss.value=="what is your name") {
-    bbb.value = "my name is somaiya";
+if (speech.text=="what is your name") {
+    value = "my name is somaiya";
     speech.volume = 1;
     speech.rate = 0.84;
     speech.pitch = 1.4;
 }  
-if (sss.value.includes("do you think it's a boring day")) {
-  bbb.value = "yes sabbir";
+if (speech.text.includes("do you think it's a boring day")) {
+  value = "yes sabbir";
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
@@ -582,11 +582,8 @@ if (sss.value.includes("do you think it's a boring day")) {
 ///////////
 //////////
 /////////
-else {
-  bbb.value = bbb.value;
-}
 ////////
-//////////
-speech.text = bbb.value;
+speech.text = value;
+bbb.innerHTML="su-"+value;
 window.speechSynthesis.speak(speech);
 };

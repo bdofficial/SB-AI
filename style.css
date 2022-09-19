@@ -1,9 +1,11 @@
-#hii{
-  
-text-align: center;
-  
-}
-
-#bd{
-  background-color: red;
+textarea{
+font-weight: bold;
+height: 0.9rem;
+width:100%;
+text-align:center;
+color: white;
+background-color:#00000000;
+border-color:#00000000;
+outline: none;
+overflow: hidden;
 }
