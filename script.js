@@ -1,4 +1,7 @@
-	var data = [
+//////
+reply="";
+//////
+var data = [
     [0, 4, "hello sir"], 
     [5, 11, "Good morning sir"],    
     [12, 14, "Good noon sir"],
@@ -68,7 +71,6 @@ recognition.start();
 ////////
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
-var bbb = document.getElementById("bbb");
 voice=message.toLowerCase();
 sss.innerHTML="sa-"+voice;
 //////////////////
@@ -573,7 +575,21 @@ if (voice.includes("do you think it's a boring day")) {
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
-} 
+}
+name = document.getElementById("name").value;
+if (voice=="what is my name") {
+  reply = "your name is "+name;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+birthday = document.getElementById("birthday").value;
+if (voice == "when is my birthday") {
+  reply = "your birthday is on " + birthday;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 ////////////////////////////////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
