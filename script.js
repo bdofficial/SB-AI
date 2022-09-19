@@ -78,7 +78,7 @@ if (sss.value.includes("weather")) {
   bbb.rate = 0.7;
   bbb.pitch = 1.4;
 }
-if (sss.value == "date") {
+if (sss.value == "date"||sss.value == "what is today's date") {
   bbb.value = date;
   bbb.volume = 0.6;
   bbb.rate = 0.6;
@@ -533,25 +533,19 @@ if (sss.value=="open tiktok" || sss.value=="open tik tok") {
   bbb.pitch = 1.4;
 }
 ///////////////////
-if (sss.value.includes("what is problem")) {
-  bbb.value = "problem is you are human";
-  bbb.volume = 1;
-  bbb.rate = 0.4;
-  bbb.pitch = 1.4;
-}
-if (sss.value.includes("can you understand me")) {
+if (sss.value=="can you understand me") {
   bbb.value = "yes i can understand you";
   bbb.volume = 1;
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value.includes("who is Shanta")) {
+if (sss.value=="who is Shanta") {
   bbb.value = "he is your friend";
   bbb.volume = 1;
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value.includes("can you sing")) {
+if (sss.value=="can you sing") {
   bbb.value = "yes i can";
   bbb.volume = 1;
   bbb.rate = 0.4;
