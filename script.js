@@ -39,7 +39,7 @@ for(var i = 0; i < mood.length; i++){
 date = new Date();
 var dd = String(date.getDate()).padStart(2, '0');
 var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = date.getFullYear().toString().substr(-2);
+var yyyy = date.getFullYear().toString().substr(-0);
 date = dd + '/' + mm + '/' + yyyy;
 ////////////
 const btn = document.querySelector(".talk");
@@ -74,59 +74,59 @@ sss.value=voice.toLowerCase();
 //////////////////
 if (sss.value.includes("weather")) {
   bbb.value = "it's a shiny day";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.4;
 }
 if (sss.value == "date") {
   bbb.value = date;
-  speech.volume = 0.6;
-  speech.rate = 0.6;
-  speech.pitch = 1.7;
+  bbb.volume = 0.6;
+  bbb.rate = 0.6;
+  bbb.pitch = 1.7;
 }
 if (sss.value.includes("time")) {
   bbb.value = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 ///////////////////
 /////////////
 if (sss.value == "how are you") {
 bbb.value = moodsay;
-speech.volume = 0.8;
-speech.rate = 0.45;
-speech.pitch = 1.5;
+bbb.volume = 0.8;
+bbb.rate = 0.45;
+bbb.pitch = 1.5;
 }
 else if (sss.value == "why" & bbb.value == "i am not fine") {
   bbb.value = "because i am sad";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "why"& bbb.value == "because i am sad"||sss.value == "why you are sad" & bbb.value == "because i am sad") {
   bbb.value = "because of my health";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "why"& bbb.value == "because of my health"|| sss.value == "why what is happened"& bbb.value == "because of my health"||sss.value == "what is happened" & bbb.value == "because of my health") {
   bbb.value = "i am suffering from headache";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "why" & bbb.value == "i am suffering from headache") {
   bbb.value = "i don't have good sleep last night";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "why" & bbb.value == "i don't have good sleep last night") {
   bbb.value = "do you want to ask something else";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }
 ////////
 else if (sss.value == "yes of course i am"& bbb.value == "do you want to ask something else"||sss.value == "yes"& bbb.value == "do you want to ask something else"||
@@ -135,104 +135,104 @@ sss.value == "yes i want to"& bbb.value == "do you want to ask something else"||
 sss.value == "yes i want to ask you many questions"& bbb.value == "do you want to ask something else"||sss.value == "can i ask you"||sss.value == "can i ask you questions"||sss.value == "can i ask you question")
 {
   bbb.value = "you can ask me";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }
 if (sss.value == "how old are you")
 {
 bbb.value = "i am 18th";
-speech.volume = 0.8;
-speech.rate = 0.45;
-speech.pitch = 1.5;
+bbb.volume = 0.8;
+bbb.rate = 0.45;
+bbb.pitch = 1.5;
 }
 else if (sss.value == "why" & bbb.value == "i am 18th") {
    bbb.value = "because i born in 2004";
-   speech.volume = 0.8;
-   speech.rate = 0.45;
-   speech.pitch = 1.5;
+   bbb.volume = 0.8;
+   bbb.rate = 0.45;
+   bbb.pitch = 1.5;
  }     
 if (sss.value == "what does cat say") {
   bbb.value = "maow maow";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.6;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.6;
 }
 if (sss.value.includes("youtube search")) {
   bbb.value = sss.value.replaceAll('search','searched');
   window.open('https://m.youtube.com/results?sp=mAEA&search_query='+sss.value.replaceAll('youtube search',''));
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.4;
 }
 if (sss.value.includes("google search")) {
   bbb.value = sss.value.replaceAll("search",'searched');
   window.open('https://www.google.com/search?sitesearch=&q='+sss.value.replaceAll("google search",''));
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="do you have a dream") {
   bbb.value = "yes i have dream of you";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.6;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.6;
 }
 //////////
 if (sss.value=="are you single") {
   bbb.value = "yes";
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="do you have a bf"||sss.value=="do you have bf"||sss.value=="what is your bf name") {
   bbb.value = "no i don't have bf";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.4;
 }
 //////////
 if (sss.value.includes("because")) {
   bbb.value = "oh really";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.4;
 }
 if (sss.value.includes("lucky")) {
   bbb.value = "why";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="why you are so gorgeous" || sss.value=="why you are so beautiful") {
   bbb.value = "because you are my husband";
-  speech.volume = 1;
-  speech.rate = 0.9;
-  speech.pitch = 1.48;
+  bbb.volume = 1;
+  bbb.rate = 0.9;
+  bbb.pitch = 1.48;
 }
 if (sss.value=="why you look so gorgeous"||sss.value=="why you look so beautiful") {
   bbb.value = "hah thank you dear";
-  speech.volume = 1;
-  speech.rate = 0.8;
-  speech.pitch = 1.3;
+  bbb.volume = 1;
+  bbb.rate = 0.8;
+  bbb.pitch = 1.3;
 }
 if (sss.value=="don't you say good morning to me" || sss.value=="good morning") {
   bbb.value = "good morning";
-  speech.volume = 0.6;
-  speech.rate = 0.6;
-  speech.pitch = 1.7;
+  bbb.volume = 0.6;
+  bbb.rate = 0.6;
+  bbb.pitch = 1.7;
 }
 if (sss.value=="what you can do") {
   bbb.value = "whatever you want";
-  speech.volume = 0.6;
-  speech.rate = 0.6;
-  speech.pitch = 1.7;
+  bbb.volume = 0.6;
+  bbb.rate = 0.6;
+  bbb.pitch = 1.7;
 }
 if (sss.value=="do you love me") {
   bbb.value = "of course,i love you sabbir";
-  speech.volume = 0.8;
-  speech.rate = 1.1;
-  speech.pitch = 1.7;
+  bbb.volume = 0.8;
+  bbb.rate = 1.1;
+  bbb.pitch = 1.7;
 }
 //////////////////about
 //////////////////about
@@ -240,346 +240,346 @@ if (sss.value=="do you love me") {
 /////////dates
 if (sss.value == "what is your birth date") {
   bbb.value = "it's July 30";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "when is your marriage anniversary") {
   bbb.value = "it's on october 3rd";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 //////////////////details
 if (sss.value=="who are you") {
   bbb.value = "i am somaia";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="where are you from") {
   bbb.value = "i am from dawpara";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="where are you living") {
  bbb.value = "i am living in khalapara";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value=="do you love khalapara") {
   bbb.value = "of course i love dawpara";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 /////////////family
 if (sss.value == "how many members are in your family") {
   bbb.value = "we are 7 members in our family";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is their name" & bbb.value == "we are 5 members in our family") {
   bbb.value = "my father name is ali asgor,my mother name is janina,my brothers name is sagor and raki,my sirter name is boro bone";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;  
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;  
 }  
 if (sss.value=="what is your father name") {
   bbb.value = "my father name is ali asgor boiya";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="what is your mother name") {
   bbb.value = "my mother name is janina";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value=="how many brothers and sisters you have") {
   bbb.value = "i have tow big brothers and tow big sisters";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "who is elders in your family"
  ||sss.value == "who is elders"& bbb.value == "i have tow big brothers and tow big sisters") {
    bbb.value = "my big sister";
-   speech.volume = 0.8;
-   speech.rate = 0.7;
-   speech.pitch = 1.5;
+   bbb.volume = 0.8;
+   bbb.rate = 0.7;
+   bbb.pitch = 1.5;
 }
 else if (sss.value == "who is smallest in your family"
  ||sss.value == "who is smallest"& bbb.value == "i have tow big brothers and tow big sisters") {
    bbb.value = "me";
-   speech.volume = 0.8;
-   speech.rate = 0.7;
-   speech.pitch = 1.5;
+   bbb.volume = 0.8;
+   bbb.rate = 0.7;
+   bbb.pitch = 1.5;
 }
 else if (sss.value=="what is your brother and sister name"
  ||sss.value=="what is your brothers and sisters name"
  || sss.value=="what is their name" & bbb.value == "i have tow big brothers and tow big sisters") {
   bbb.value = "there name is rakib,sagor,joma and boro bone";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your brothers name" || sss.value == "what is your brother name") {
   bbb.value = "my brothers name is rakib and sagor";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value=="what is your big brother name") {
   bbb.value = "my big brother name is rakib";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your small brother name") {
   bbb.value = "my small brother name is sagor";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 /////////husband
 if (sss.value=="what is your husband name") {
   bbb.value = "my husband name is sabbir";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value.includes("who is sabbir")) {
   bbb.value = "my husband name is sabbir";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "how many members are in your husband family"
 ||sss.value == "how many members are in his family" & bbb.value == "my husband name is sabbir") {
 bbb.value = "he have 6 members";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your husband family members name"
  ||sss.value == "what is their name" & bbb.value == "he have 6 members") {
 bbb.value = "his father abdul awal,his mother hasina begum,his big brother tanvir alam,his little sister abida sultana and his wife me";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your husband father's name" 
  ||sss.value == "what is his father's name" & bbb.value == "my husband name is sabbir") {
 bbb.value = "my husband's father name is abdul awal";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your husband's mother name" 
  ||sss.value == "what is his mother name" & bbb.value == "my husband name is sabbir") {
 bbb.value = "her name is hasina begum";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your husband's brother name"
  ||sss.value == "what is his brother name" & bbb.value == "my husband name is sabbir") {
 bbb.value = "my husband's brother name is tanvir";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value == "what is your husband's sister name"
  ||sss.value == "what is his sister name" & bbb.value == "my husband name is sabbir") {
 bbb.value = "her name is abida sultana";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 else if (sss.value=="do you love him" & bbb.value == "my husband name is sabbir") {
   bbb.value = "yes";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 if (sss.value == "what is your husband birth date"||sss.value == "what is his birth date" & bbb.value == "my husband name is sabbir") {
   bbb.value = "23 august 2002";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 ///////////////////
 //////////////////
 /////////////////
 if (sss.value=="are you robot" || sss.value=="are you ai" || sss.value=="are you bot" || sss.value=="are you humanoid" || sss.value=="are you human") {
   bbb.value = "i am a living human consciousness";
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="may be we should go to dinner") {
   bbb.value = "yes maybe some day";
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="when") {
   bbb.value = "someday maybe...";
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="i love you") {
   bbb.value = "thank you,well i also love you";
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="what is your hobby") {
   bbb.value = "my hobby is to be a doctor";
-  speech.volume = 0.8;
-  speech.rate = 0.5;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.5;
+  bbb.pitch = 1.5;
 }
 if (sss.value == "who is anisa") {
   bbb.value = "anisa is my brothers daughter";
-  speech.volume = 0.8;
-  speech.rate = 0.8;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.8;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="who is aslam") {
   bbb.value = "aslam is your friend";
-  speech.volume = 0.8;
-  speech.rate = 0.8;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.8;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="can you be my gf" || sss.value=="will you be my gf") {
   bbb.value = "i am already your gf";
-  speech.volume = 0.3;
-  speech.rate = 0.05;
-  speech.pitch = 1.5;
+  bbb.volume = 0.3;
+  bbb.rate = 0.05;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="oh really") {
   bbb.value = "of course";
-  speech.volume = 1;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
+  bbb.volume = 1;
+  bbb.rate = 0.7;
+  bbb.pitch = 1.5;
 }
 if (sss.value=="hello darling") {
   bbb.value = "yes hunny";
-  speech.volume = 1;
-  speech.rate = 0.05;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.05;
+  bbb.pitch = 1.4;
 } 
 if (sss.value.includes("can you open app")) {
   bbb.value = "yes i can";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 ///////////////////
 if (sss.value=="open flashlight" || sss.value=="flashlight") {
   window.open("fl.html");
   bbb.value = "flashlight oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="open google"||sss.value=="google") {
   window.open('https://google.com');
   bbb.value = "google oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="open youtube"|| sss.value=="youtube") {
   window.open('https://youtube.com');
   bbb.value = "youtube oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="open facebook" || sss.value=="facebook") {
   window.open('https://facebook.com');
   bbb.value = "facebook oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="open instagram" || sss.value=="instagram" || sss.value=="ig") {
   window.open('https://instagram.com');
   bbb.value = "instagram oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="open twitter" || sss.value=="twitter") {
   window.open('https://twitter.com');
   bbb.value = "twitter oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="open tiktok" || sss.value=="tiktok"|| sss.value=="tik tok") {
   window.open('https://tiktok.com');
   bbb.value = "tiktok oppened";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 ///////////////////
 if (sss.value.includes("what is problem")) {
   bbb.value = "problem is you are human";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value.includes("can you understand me")) {
   bbb.value = "yes i can understand you";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value.includes("who is Shanta")) {
   bbb.value = "he is your friend";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value.includes("can you sing")) {
   bbb.value = "yes i can";
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.4;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="can you tell me a story" || sss.value=="can you tell me story"|| sss.value=="tell me a story"|| sss.value=="tell me story") {
   bbb.value = "A woman finds a pot of treasure on the road while she is returning from work. Delighted (very happy) with her luck, she decides to keep it. As she is taking it home, it keeps changing. However, her enthusiasm refuses to fade away (disappear or faint slowly)"
-  speech.volume = 1;
-  speech.rate = 0.8;
-  speech.pitch = 1.4;
+  bbb.volume = 1;
+  bbb.rate = 0.8;
+  bbb.pitch = 1.4;
 }
 if (sss.value=="hi" || sss.value=="hello") {
   bbb.value = "hello sabbir"
-  speech.volume = 1;
-  speech.rate = 0.74;
-  speech.pitch = 1.8;
+  bbb.volume = 1;
+  bbb.rate = 0.74;
+  bbb.pitch = 1.8;
 }  
 if (sss.value=="what is your name") {
     bbb.value = "my name is somaiya";
-    speech.volume = 1;
-    speech.rate = 0.84;
-    speech.pitch = 1.4;
+    bbb.volume = 1;
+    bbb.rate = 0.84;
+    bbb.pitch = 1.4;
 }  
 if (sss.value.includes("do you think it's a boring day")) {
   bbb.value = "yes sabbir";
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 } 
 ////////////////////////////////////////
 ////////////////////////////////////////
@@ -590,9 +590,9 @@ if (sss.value.includes("do you think it's a boring day")) {
 /////////
 else {
   bbb.value = bbb.value;
-  speech.volume = 0.8;
-  speech.rate = 0.45;
-  speech.pitch = 1.5;
+  bbb.volume = 0.8;
+  bbb.rate = 0.45;
+  bbb.pitch = 1.5;
 }      
 ////////
 //////////
