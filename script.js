@@ -497,35 +497,35 @@ if (sss.value=="open google"||sss.value=="google") {
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value=="open youtube"|| sss.value=="youtube") {
+if (sss.value=="open youtube") {
   window.open('https://youtube.com');
   bbb.value = "youtube oppened";
   bbb.volume = 1;
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value=="open facebook" || sss.value=="facebook") {
+if (sss.value=="open facebook") {
   window.open('https://facebook.com');
   bbb.value = "facebook oppened";
   bbb.volume = 1;
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value=="open instagram" || sss.value=="instagram" || sss.value=="ig") {
+if (sss.value=="open instagram"|| sss.value=="ig") {
   window.open('https://instagram.com');
   bbb.value = "instagram oppened";
   bbb.volume = 1;
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value=="open twitter" || sss.value=="twitter") {
+if (sss.value=="open twitter") {
   window.open('https://twitter.com');
   bbb.value = "twitter oppened";
   bbb.volume = 1;
   bbb.rate = 0.4;
   bbb.pitch = 1.4;
 }
-if (sss.value=="open tiktok" || sss.value=="tiktok"|| sss.value=="tik tok") {
+if (sss.value=="open tiktok" || sss.value=="open tik tok") {
   window.open('https://tiktok.com');
   bbb.value = "tiktok oppened";
   bbb.volume = 1;
