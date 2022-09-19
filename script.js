@@ -22,6 +22,19 @@ listenBtn.addEventListener('mouseover', (e) => {
   msg.pitch = 1.4;
   window.speechSynthesis.speak(msg);
 });}}
+//////////mood
+var mood = [
+    [0, 4, "i am feeling sleepy"], 
+    [5, 11, "i am not fine"],    
+    [12, 14, "i am not fine"],
+    [15, 17, "i am fine,and you?"],
+    [18, 19, "i am feeling good"],
+    [20, 24, "i am fine,and you?"]
+    ],
+    hr = new Date().getHours();
+for(var i = 0; i < mood.length; i++){
+    if(hr >= mood[i][0] && hr <= mood[i][1]){
+        moodsay=(mood[i][2]);}}
 //////////date
 date = new Date();
 var dd = String(date.getDate()).padStart(2, '0');
@@ -58,9 +71,29 @@ const readOutLoud = (voice) => {
 var sss = document.getElementById("sss");
 var bbb = document.getElementById("bbb");
 sss.value=voice.toLowerCase();
+//////////////////
+if (sss.value.includes("weather")) {
+  bbb.value = "it's a shiny day";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.4;
+}
+if (sss.value.includes("date")) {
+  bbb.value = date;
+  speech.volume = 0.6;
+  speech.rate = 0.6;
+  speech.pitch = 1.7;
+}
+if (sss.value.includes("time")) {
+  bbb.value = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
+  speech.volume = 1;
+  speech.rate = 0.4;
+  speech.pitch = 1.4;
+}
+///////////////////
 /////////////
 if (sss.value == "how are you") {
-bbb.value = "i am not fine";
+bbb.value = moodsay;
 speech.volume = 0.8;
 speech.rate = 0.45;
 speech.pitch = 1.5;
@@ -119,26 +152,6 @@ else if (sss.value == "why" & bbb.value == "i am 18th") {
    speech.rate = 0.45;
    speech.pitch = 1.5;
  }     
-//////////////////
-if (sss.value.includes("weather")) {
-  bbb.value = "it's a cloudy day";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
-}
-if (sss.value.includes("date")) {
-  bbb.value = date;
-  speech.volume = 0.6;
-  speech.rate = 0.6;
-  speech.pitch = 1.7;
-}
-if (sss.value.includes("time")) {
-  bbb.value = (new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }))
-  speech.volume = 1;
-  speech.rate = 0.4;
-  speech.pitch = 1.4;
-}
-///////////////////
 if (sss.value == "what does cat say") {
   bbb.value = "maow maow";
   speech.volume = 0.8;
