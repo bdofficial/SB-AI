@@ -139,8 +139,7 @@ voice == "yes i want to ask you many questions"& reply == "do you want to ask so
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-if (voice == "how old are you")
-{
+if (voice == "how old are you"){
 reply = "i am 18th";
 speech.volume = 0.8;
 speech.rate = 0.45;
