@@ -12,7 +12,7 @@ for(var i = 0; i < data.length; i++){
         timesay=(data[i][2]);
 /////////////
 const listenBtn = document.querySelector(".talk");
-listenBtn.addEventListener('mouseover', (e) => {
+listenBtn.addEventListener('mouseove', (e) => {
   e.preventDefault();
   const msg = new SpeechSynthesisUtterance(
     timesay
@@ -198,12 +198,6 @@ else if (sss.value=="do you love him" & bbb.value == "my husband name is sabbir"
   speech.pitch = 1.5;
 }
 //////////
-if (sss.value=="how many members are in your family") {
-  bbb.value = "we are 5 members in our family";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.5;
-}
 if (sss.value=="are you single") {
   bbb.value = "yes";
   speech.volume = 0.8;
@@ -298,32 +292,62 @@ if (sss.value=="what is your mother name") {
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-/////////
-if (sss.value=="how many brothers and sisters you have") {
-  bbb.value = "i have tow big brother and tow big sister";
+/////////////
+if (sss.value == "how many members are in your family") {
+  bbb.value = "we are 5 members in our family";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (sss.value=="what's there name" || sss.value=="what is their name"  & bbb.value == "i have tow big brother and tow big sister") {
-  bbb.value = "my brother name is rakib and sagor";
+else if (sss.value == "what's there name" & bbb.value == "we are 5 members in our family" ||
+  sss.value == "what is their name" & bbb.value == "we are 5 members in our family") {
+  bbb.value = "my father name is ali asgor,my mother name is janina,my brothers name is sagor and raki,my sirter name is boro bone";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;  
+}  
+else if (sss.value=="how many brothers and sisters you have") {
+  bbb.value = "i have tow big brothers and tow big sisters";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value == "what is your brothers name" || sss.value == "what is your brother name") {
+else if (sss.value == "who is elders in your family"
+ ||sss.value == "who is elders"& bbb.value == "i have tow big brothers and tow big sisters") {
+   bbb.value = "my big sister";
+   speech.volume = 0.8;
+   speech.rate = 0.7;
+   speech.pitch = 1.5;
+}
+else if (sss.value == "who is smallest in your family"
+ ||sss.value == "who is smallest"& bbb.value == "i have tow big brothers and tow big sisters") {
+   bbb.value = "me";
+   speech.volume = 0.8;
+   speech.rate = 0.7;
+   speech.pitch = 1.5;
+}
+else if (sss.value=="what is your brother and sister name"
+ ||sss.value=="what is your brothers and sisters name"
+ ||sss.value=="what's there name" & bbb.value == "i have tow big brothers and tow big sisters"
+ || sss.value=="what is their name" & bbb.value == "i have tow big brothers and tow big sisters") {
+  bbb.value = "there name is rakib,sagor,joma and boro bone";
+  speech.volume = 0.8;
+  speech.rate = 0.7;
+  speech.pitch = 1.5;
+}
+else if (sss.value == "what is your brothers name" || sss.value == "what is your brother name") {
   bbb.value = "my brothers name is rakib and sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value=="what's your big brother name is" || sss.value=="what is your big brother name") {
+else if (sss.value=="what's your big brother name is" || sss.value=="what is your big brother name") {
   bbb.value = "my big brother name is rakib";
   speech.volume = 0.8;
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-if (sss.value == "what's your small brother name" || sss.value == "what is your small brother name") {
+else if (sss.value == "what's your small brother name" || sss.value == "what is your small brother name") {
   bbb.value = "my small brother name is sagor";
   speech.volume = 0.8;
   speech.rate = 0.7;
