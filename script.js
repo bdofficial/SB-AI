@@ -395,7 +395,7 @@ if (sss.value.includes("can you open app")) {
 }
 ///////////////////
 if (sss.value=="open flashlight" || sss.value=="flashlight") {
-  window.open('https://bdurl.netlify.app/fl.html');
+  window.open("fl.html");
   bbb.value = "flashlight oppened";
   speech.volume = 1;
   speech.rate = 0.4;
