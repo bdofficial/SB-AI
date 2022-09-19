@@ -55,7 +55,6 @@ recognition.start();
 ////////
 const readOutLoud = (voice) => {
   const speech = new SpeechSynthesisUtterance();
-var hhh = document.getElementById("hhh");
 var sss = document.getElementById("sss");
 var bbb = document.getElementById("bbb");
 sss.value=voice.toLowerCase();
