@@ -14,8 +14,8 @@ for(var i = 0; i < data.length; i++){
     if(hr >= data[i][0] && hr <= data[i][1]){
         timesay=(data[i][2]);
 /////////////
-const listenBtn = document.querySelector(".talk");
-listenBtn.addEventListener('mouseove', (e) => {
+const listenBtn = document.querySelector(".sir");
+listenBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const msg = new SpeechSynthesisUtterance(
     timesay
@@ -45,7 +45,7 @@ var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = date.getFullYear().toString().substr(-0);
 date = dd + '/' + mm + '/' + yyyy;
 ////////////
-const btn = document.querySelector(".talk");
+const btn = document.querySelector(".body");
 // const content = document.querySelector(".content");
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
