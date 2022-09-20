@@ -1,44 +1,20 @@
 //check if "name" is in localStorage
-if (localStorage["name"])
+if (localStorage["name77"])
 {
-    var name = localStorage["name"] ;
-    document.getElementById("name").value = name ;
+    var name = localStorage["name77"] ;
+    name77.innerHTML=name;
 }
 else
 {
-    document.getElementById("name").placeholder = " " ;
+    document.getElementById("name77").placeholder = " " ;
     console.log("name no found in localStorage")
 }
 
 //save entered gmail address
-document.getElementById("name").addEventListener("input", function ()
+document.getElementById("html").addEventListener("click", function ()
     {
-        var name = document.getElementById("name").value ;
+        var name77 = document.getElementById("name77").value ;
         //localStorage["name"] = name ;
-        localStorage.setItem("name", name) ;
-        console.log("gmail id saved")
-    } , false);
-
-
-
-
-//check if "name" is in localStorage
-if (localStorage["birthday"])
-{
-    var name = localStorage["birthday"] ;
-    document.getElementById("birthday").value = name ;
-}
-else
-{
-    document.getElementById("birthday").placeholder = " " ;
-    console.log("name no found in localStorage")
-}
-
-//save entered gmail address
-document.getElementById("birthday").addEventListener("input", function ()
-    {
-        var name = document.getElementById("birthday").value ;
-        //localStorage["name"] = name ;
-        localStorage.setItem("birthday", name) ;
+        localStorage.setItem("name77", name77) ;
         console.log("gmail id saved")
     } , false);

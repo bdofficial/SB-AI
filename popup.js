@@ -1,3 +1,23 @@
+sbiii=document.getElementById("sbiii");
+hide=document.getElementById("hide");
+hide.style.visibility = 'hidden';
+sbiii.addEventListener('click', () =>
+{
+ if (hide.style.visibility = 'hidden') {
+    hide.style.visibility = 'visible'
+  }
+}
+);
+
+hiid=document.getElementById("hiid");
+hiid.addEventListener('click', () =>
+    hide.style.visibility = 'hidden'
+);
+
+
+
+
+
   class InteractiveChatbox {
     constructor(a, b, ) {
         this.args = {

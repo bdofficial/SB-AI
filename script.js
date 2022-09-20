@@ -558,6 +558,13 @@ if (voice=="can you tell me a story" || voice=="can you tell me story"|| voice==
   speech.rate = 0.8;
   speech.pitch = 1.4;
 }
+if (voice.includes("do you think it's a boring day")) {
+  reply = "yes sabbir";
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+///////
 if (voice=="hi" || voice=="hello") {
   reply = "hello sabbir"
   speech.volume = 1;
@@ -570,22 +577,32 @@ if (voice=="what is your name") {
     speech.rate = 0.84;
     speech.pitch = 1.4;
 }  
-if (voice.includes("do you think it's a boring day")) {
-  reply = "yes sabbir";
+///////////////
+if (voice.includes("my name is")) {
+reply = voice.replaceAll("my name is",'hello');
+  name77.innerHTML=voice;
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-name = document.getElementById("name").value;
+name = document.getElementById("name77").value;
 if (voice=="what is my name") {
-  reply = "your name is "+name;
+reply = name.replaceAll("my name is",'your name is');
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-birthday = document.getElementById("birthday").value;
+///////////
+if (voice.includes("my birthday is on")) {
+reply = "oky";
+  birthday77.innerHTML = voice;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+birthday = document.getElementById("birthday77");
 if (voice == "when is my birthday") {
-  reply = "your birthday is on " + birthday;
+reply = birthday.replaceAll("my birthday is on",'your birthday is on');
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
