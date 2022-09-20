@@ -607,6 +607,21 @@ reply = birthday.replaceAll("my birthday is on",'your birthday is on');
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
+///////////////
+if (voice.includes("my favourite colour is")) {
+  reply = "ok";
+  fc7.innerHTML = voice;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+fc = document.getElementById("fc7").value;
+if (voice == "what is my favourite colour") {
+  reply = fc.replaceAll("my favourite colour is", 'your favourite colour is');
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 ////////////////////////////////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
