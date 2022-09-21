@@ -782,7 +782,7 @@ reply = "ok";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "what is my favourite place"||voice == "do you know what is my favourite place is") {
+else if (voice == "what is my favourite place"||voice == "do you know my favorite place"||voice == "do you know what is my favourite place is") {
   fp = document.getElementById("fp7").value;
 reply = fp.replaceAll("my favourite place is", 'your favourite place is');
   speech.text = reply;
