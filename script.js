@@ -7,7 +7,7 @@ var data = [
     [12, 14, "Good noon sir"],
     [15, 17, "Good afternoon sir"],
     [18, 19, "Good evening sir"],
-    [20, 24, "how are you sabbir"]
+    [20, 24, "how are you sir"]
     ],
     hr = new Date().getHours();
 for(var i = 0; i < data.length; i++){
@@ -93,6 +93,18 @@ if (voice.includes("time")) {
   speech.pitch = 1.4;
 }
 ///////////////////
+if (voice == "i am not fine") {
+  reply = "why what's happened";
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.6;
+}
+else if (voice.includes("") & reply == "why what's happened") {
+  reply = "hope everything will be fine soon";
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 /////////////
 if (voice == "how are you") {
 reply = moodsay;
@@ -193,18 +205,6 @@ if (voice=="do you have a bf"||voice=="do you have bf"||voice=="what is your bf 
   speech.pitch = 1.4;
 }
 //////////
-if (voice.includes("because")) {
-  reply = "oh really";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
-}
-if (voice.includes("lucky")) {
-  reply = "why";
-  speech.volume = 0.8;
-  speech.rate = 0.7;
-  speech.pitch = 1.4;
-}
 if (voice=="why you are so gorgeous" || voice=="why you are so beautiful") {
   reply = "because you are my husband";
   speech.volume = 1;
@@ -566,7 +566,7 @@ if (voice.includes("do you think it's a boring day")) {
 }
 ///////
 if (voice=="hi" || voice=="hello") {
-  reply = "hello sabbir"
+  reply = timesay;
   speech.volume = 1;
   speech.rate = 0.74;
   speech.pitch = 1.8;
@@ -595,14 +595,14 @@ reply = name.replaceAll("my name is",'your name is');
 ///////////
 if (voice.includes("my birthday is on")) {
 reply = "oky";
-  birthday77.innerHTML = voice;
+  bd7.innerHTML = voice;
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-birthday = document.getElementById("birthday77");
+bd = document.getElementById("bd7").value;
 if (voice == "when is my birthday") {
-reply = birthday.replaceAll("my birthday is on",'your birthday is on');
+reply = bd.replaceAll("my birthday is on",'your birthday is on');
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;

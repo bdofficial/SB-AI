@@ -8,7 +8,6 @@ else
 {
     console.log("name not found")
 }
-
 //save entered gmail address
 document.getElementById("html").addEventListener("click", function ()
     {
@@ -22,26 +21,25 @@ document.getElementById("html").addEventListener("click", function ()
 
 
 
+
 //check if "name" is in localStorage
-if (localStorage["birthday77"])
+if (localStorage["bd7"])
 {
-   var birthday = localStorage["birthday 77"] ;
-    birthday77.innerHTML=birthday;
+    var bd = localStorage["bd7"] ;
+    bd7.innerHTML=bd;
 }
 else
 {
     console.log("color not found")
 }
-
 //save entered gmail address
 document.getElementById("html").addEventListener("click", function ()
     {
-        var birthday77 = document.getElementById("birthday77").value ;
+        var bd7 = document.getElementById("bd7").value ;
         //localStorage["name"] = name ;
-        localStorage.setItem("birthday77", birthday77) ;
+        localStorage.setItem("bd7",bd7) ;
         console.log("gmail id saved")
     } , false);
-
 
 
 
@@ -58,7 +56,6 @@ else
 {
     console.log("color not found")
 }
-
 //save entered gmail address
 document.getElementById("html").addEventListener("click", function ()
     {
