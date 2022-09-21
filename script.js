@@ -811,7 +811,7 @@ else if (voice.includes("what") & voice.includes("is") & voice.includes("my")||v
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice.includes("my") & voice.includes("is")) {
+else if (voice.includes("my") & voice.includes("is")||voice.includes("our") & voice.includes("is")) {
   reply = "oky";
   dog7.innerHTML = voice;
   speech.text = reply;
