@@ -697,7 +697,7 @@ reply = voice.replaceAll("my name is",'hello');
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice=="what is my name"||voice == "do you know what is my name") {
+else if (voice=="what is my name"||voice == "do you know my name") {
   name = document.getElementById("name77").value;
 reply = name.replaceAll("my name is",'your name is');
   speech.text = reply;
@@ -714,7 +714,7 @@ reply = "oky";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "when is my birthday"||voice == "do you know when is my birthday") {
+else if (voice == "when is my birthday"||voice == "do you know when is my birthday"||voice == "do you know what is my birth date") {
   bd = document.getElementById("bd7").value;
 reply = bd.replaceAll("my birthday is on",'your birthday is on');
   speech.text = reply;
@@ -860,6 +860,7 @@ reply = reply;
 bbb.innerHTML="su-"+reply;
 window.speechSynthesis.speak(speech);
 };
+
 
 
 
