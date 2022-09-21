@@ -759,7 +759,7 @@ else if (voice.includes("who is")) {
   speech.pitch = 1.5;
 }
 ///////////////
-else if (voice.includes("what") & voice.includes("is") & voice.includes("my")) {
+else if (voice.includes("what") & voice.includes("is") & voice.includes("my")||voice.includes("how") & voice.includes("is") & voice.includes("my")) {
   dog = document.getElementById("dog7").value;
   reply = dog.replaceAll("my", 'your');
   speech.text = reply;
