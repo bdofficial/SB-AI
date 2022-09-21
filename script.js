@@ -15,14 +15,14 @@ for(var i = 0; i < data.length; i++){
         timesay=(data[i][2]);
 /////////////
 const listenBtn = document.querySelector(".sir");
-listenBtn.addEventListener('click', (e) => {
+listenBtn.addEventListener('mouseover', (e) => {
   e.preventDefault();
   const msg = new SpeechSynthesisUtterance(
     timesay
   );
   msg.volume = 1;
-  msg.rate = 0.7;
-  msg.pitch = 1.4;
+  msg.rate = 0.8;
+  msg.pitch = 1.6;
   window.speechSynthesis.speak(msg);
 });}}
 //////////mood
@@ -608,6 +608,21 @@ reply = bd.replaceAll("my birthday is on",'your birthday is on');
   speech.pitch = 1.5;
 }
 ///////////////
+if (voice.includes("my blood group is")) {
+  reply = "ok";
+  bg7.innerHTML = voice;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+bg = document.getElementById("bg7").value;
+if (voice == "what is my blood group") {
+  reply = bg.replaceAll("my blood group is", 'your blood group is');
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+///////////////
 if (voice.includes("my favourite colour is")) {
   reply = "ok";
   fc7.innerHTML = voice;
@@ -618,6 +633,21 @@ if (voice.includes("my favourite colour is")) {
 fc = document.getElementById("fc7").value;
 if (voice == "what is my favourite colour") {
   reply = fc.replaceAll("my favourite colour is", 'your favourite colour is');
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+///////////////
+if (voice.includes("my wife name is")) {
+  reply = "ok";
+  mwn7.innerHTML = voice;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+mwn = document.getElementById("mwn7").value;
+if (voice == "what is my wife name") {
+  reply = mwn.replaceAll("my wife name is", 'your wife name is');
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
