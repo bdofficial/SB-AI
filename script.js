@@ -662,7 +662,7 @@ reply = timesay;
   speech.volume = 1;
   speech.rate = 0.74;
   speech.pitch = 1.8;
-}  
+}
 else if (voice=="what is your name") {
   reply = "my name is chinki";
     speech.text = reply;
@@ -697,7 +697,7 @@ reply = voice.replaceAll("my name is",'hello');
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice=="what is my name") {
+else if (voice=="what is my name"||voice == "do you know what is my name") {
   name = document.getElementById("name77").value;
 reply = name.replaceAll("my name is",'your name is');
   speech.text = reply;
@@ -714,7 +714,7 @@ reply = "oky";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "when is my birthday") {
+else if (voice == "when is my birthday"||voice == "do you know when is my birthday") {
   bd = document.getElementById("bd7").value;
 reply = bd.replaceAll("my birthday is on",'your birthday is on');
   speech.text = reply;
@@ -731,7 +731,7 @@ reply = "ok";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "what is my blood group") {
+else if (voice == "what is my blood group"||voice == "do you know what is my blood group") {
   bg = document.getElementById("bg7").value;
 reply = bg.replaceAll("my blood group is", 'your blood group is');
   speech.text = reply;
@@ -748,7 +748,7 @@ reply = "ok";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "what is my favourite colour") {
+else if (voice == "what is my favourite colour"||voice == "do you know what is my favourite color") {
   fc = document.getElementById("fc7").value;
 reply = fc.replaceAll("my favourite colour is", 'your favourite colour is');
   speech.text = reply;
@@ -765,7 +765,7 @@ reply = "ok";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "what is my wife name") {
+else if (voice == "what is my wife name"||voice == "do you know what is my wife name") {
   mwn = document.getElementById("mwn7").value;
 reply = mwn.replaceAll("my wife name is", 'your wife name is');
   speech.text = reply;
@@ -782,7 +782,7 @@ reply = "ok";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice == "what is my favourite place") {
+else if (voice == "what is my favourite place"||voice == "do you know what is my favourite place is") {
   fp = document.getElementById("fp7").value;
 reply = fp.replaceAll("my favourite place is", 'your favourite place is');
   speech.text = reply;
