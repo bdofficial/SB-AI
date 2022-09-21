@@ -662,7 +662,25 @@ else if (voice=="what is your name") {
     speech.rate = 0.84;
     speech.pitch = 1.4;
 }  
-///////////////
+////////////////////
+//////////////////////
+else if (voice.includes("do you love my")) {
+  reply = voice.replaceAll("do you love", 'i love');
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+/////////////////////
+else if (voice.includes("do you love")) {
+  reply = voice.replaceAll("do you love", 'yes i love');
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+//////////////////
+////////////////////
 else if (voice.includes("my name is")) {
 reply = voice.replaceAll("my name is",'hello');
   name77.innerHTML=voice;
@@ -788,7 +806,7 @@ else if (voice.includes("is")) {
 ///////////////
 else if (voice.includes("what i love")) {
   dog = document.getElementById("dog7").value;
-  reply = dog.replaceAll("i", 'you');
+  reply = dog.replaceAll("i",'you');
   speech.text = reply;
   speech.volume = 0.8;
   speech.rate = 0.45;
