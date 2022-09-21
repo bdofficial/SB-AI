@@ -108,3 +108,25 @@ document.getElementById("html").addEventListener("click", function ()
         localStorage.setItem("mwn7", mwn7) ;
         console.log("gmail id saved")
     } , false);
+
+
+
+
+//check if "name" is in localStorage
+if (localStorage["fp7"])
+{
+    var fp = localStorage["fp7"] ;
+    fp7.innerHTML=fp;
+}
+else
+{
+    console.log("color not found")
+}
+//save entered gmail address
+document.getElementById("html").addEventListener("click", function ()
+    {
+        var fp7 = document.getElementById("fp7").value ;
+        //localStorage["name"] = name ;
+        localStorage.setItem("fp7", fp7) ;
+        console.log("gmail id saved")
+    } , false);

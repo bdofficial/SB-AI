@@ -765,9 +765,27 @@ reply = mwn.replaceAll("my wife name is", 'your wife name is');
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
+///////////////
+else if (voice.includes("my favourite place is")) {
+reply = "ok";
+  fp7.innerHTML = voice;
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+else if (voice == "what is my favourite place") {
+  fp = document.getElementById("fp7").value;
+reply = fp.replaceAll("my favourite place is", 'your favourite place is');
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 ////////////////////////////////////////
 ////////////////////////////////////////
 ////////////////////////////////////////
+/////////222
 else if (voice.includes("who is")) {
   dog = document.getElementById("dog7").value;
   reply = dog.replaceAll("my", 'your');
@@ -793,7 +811,7 @@ else if (voice.includes("my") & voice.includes("is")) {
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-////////////
+////////////222
 else if (voice.includes("is")) {
   reply = "oky";
   dog7.innerHTML = voice;
