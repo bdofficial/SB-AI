@@ -785,6 +785,23 @@ else if (voice.includes("is")) {
   speech.pitch = 1.5;
 }
 ///////////
+///////////////
+else if (voice.includes("what i love")) {
+  dog = document.getElementById("dog7").value;
+  reply = dog.replaceAll("i", 'you');
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+else if (voice.includes("i love")) {
+  reply = "oky";
+  dog7.innerHTML = voice;
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 //////////
 /////////
 else {
