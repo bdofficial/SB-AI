@@ -640,6 +640,14 @@ reply = "A woman finds a pot of treasure on the road while she is returning from
   speech.rate = 0.8;
   speech.pitch = 1.4;
 }
+else if (voice=="play a song"||voice=="play song") {
+  reply = "song is  playing";
+  window.open("https://youtu.be/sGkQxFEi6AU");
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.5;
+  speech.pitch = 1.5;
+}
 else if (voice.includes("do you think it's a boring day")) {
 reply = "yes sabbir";
   speech.text = reply;
