@@ -730,6 +730,14 @@ else if (voice.includes("do you love")) {
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
+////////////////info
+else if (voice=="what is best picture") {
+  reply = ("monalisa");
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 //////////////////
 ////////////////////
 /////////////////////
@@ -908,7 +916,6 @@ else if (voice.includes("i love")||voice.includes("i can")) {
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-//////////
 /////////
 else {
 reply = reply;
