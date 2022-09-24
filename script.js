@@ -315,7 +315,21 @@ reply = "of course i love dawpara";
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-/////////////family
+/////////////about-ai
+else if (voice == "what is your name") {
+  reply = "my name is chinki";
+  speech.text = reply;
+  speech.volume = 1;
+  speech.rate = 0.84;
+  speech.pitch = 1.4;
+}
+else if (voice == "what is your blood group") {
+  reply = "my blood group is ab positive";
+  speech.text = reply;
+  speech.volume = 1;
+  speech.rate = 0.84;
+  speech.pitch = 1.4;
+}
 else if (voice == "how many members are in your family") {
 reply = "we are 7 members in our family";
   speech.text = reply;
@@ -323,7 +337,7 @@ reply = "we are 7 members in our family";
   speech.rate = 0.7;
   speech.pitch = 1.5;
 }
-else if (voice == "what is their name" & reply == "we are 5 members in our family") {
+else if (voice == "what is their name" & reply == "we are 7 members in our family") {
 reply = "my father name is ali asgor,my mother name is janina,my brothers name is sagor and raki,my sirter name is boro bone";
   speech.text = reply;
   speech.volume = 0.8;
@@ -655,7 +669,43 @@ reply = "yes sabbir";
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-///////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+/*else if (voice.includes("what is") ||voice.includes("what does") ||
+  voice.includes("meaning") ||
+  voice.includes("means")) {
+str = voice;
+str = (str+"||||,what is=>,what does=>,meaning=>,means=>,my=>your,i=>your,am=>are,i'm=>you are,round=>not flat,slim=>not fat,not fat=>slim,fat=>not slim,not slim=>fate,good=>not bad,not bad=>good,bad=>not good,not good=>bad,of life=>meaning of life is happyness").replace(
+   /(\b\w+\b)(?=[\s\S]*,\1=>([^,]*))|\|\|\|\|.*$/gi, "$2");
+  reply = str;
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}/*
+/*else if (voice.includes("what does")
+||voice.includes("meaning")
+||voice.includes("means")){
+reply = voice.replace("meaning","")
+  .replace("what does", "")
+  .replace("means", "")
+  .replace("round","not flat")
+  .replace("fat","not slim")
+  .replace("am slim","not fat")    
+  .replace("a slim","not a fat")  
+  .replace("good person","not bad person")
+  .replace("my","your")  
+  .replace("i","your")  
+  .replace("am","are");
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}*/
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
 else if (voice=="hi" || voice=="hello") {
 reply = timesay;
   speech.text = reply;
@@ -663,13 +713,6 @@ reply = timesay;
   speech.rate = 0.74;
   speech.pitch = 1.8;
 }
-else if (voice=="what is your name") {
-  reply = "my name is chinki";
-    speech.text = reply;
-  speech.volume = 1;
-    speech.rate = 0.84;
-    speech.pitch = 1.4;
-}  
 ////////////////////
 //////////////////////
 else if (voice.includes("do you love my")) {
@@ -689,6 +732,7 @@ else if (voice.includes("do you love")) {
 }
 //////////////////
 ////////////////////
+/////////////////////
 else if (voice.includes("my name is")) {
 reply = voice.replaceAll("my name is",'hello');
   name77.innerHTML=voice;
@@ -803,7 +847,7 @@ else if (voice.includes("who is")) {
   speech.pitch = 1.5;
 }
 ///////////////
-else if (voice.includes("what") & voice.includes("is") & voice.includes("my")||voice.includes("how") & voice.includes("is") & voice.includes("my")) {
+else if (voice.includes("what") & voice.includes("is") & voice.includes("my")||voice.includes("how") & voice.includes("is") & voice.includes("my")||voice.includes("what") &voice.includes("our") & voice.includes("is")||voice.includes("what") &voice.includes("her") & voice.includes("is")||voice.includes("what") &voice.includes("his") & voice.includes("is")) {
   dog = document.getElementById("dog7").value;
   reply = dog.replaceAll("my", 'your');
   speech.text = reply;
@@ -811,7 +855,7 @@ else if (voice.includes("what") & voice.includes("is") & voice.includes("my")||v
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice.includes("my") & voice.includes("is")||voice.includes("our") & voice.includes("is")) {
+else if (voice.includes("my") & voice.includes("is")||voice.includes("our") & voice.includes("is")||voice.includes("her")||voice.includes("his")) {
   reply = "oky";
   dog7.innerHTML = voice;
   speech.text = reply;
@@ -821,14 +865,13 @@ else if (voice.includes("my") & voice.includes("is")||voice.includes("our") & vo
 }
 ////////////222
 else if (voice.includes("is")) {
-  reply = "oky";
+  reply = "ok";
   dog7.innerHTML = voice;
   speech.text = reply;
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-///////////
 ///////////////
 else if (voice.includes("what i love")) {
   dog = document.getElementById("dog7").value;
@@ -847,6 +890,38 @@ else if (voice.includes("i love")) {
   speech.pitch = 1.5;
 }
 //////////
+else if (voice.includes("meaning") ||
+  voice.includes("means")) {
+  mapObj = {
+   "what is": "",
+   "what does": "",
+   "meaning": "",
+   "means": "",
+   "i": "your",
+   "my": "your",
+   "am": "are",
+   "i'm": "you are",
+   "round": "not flat",
+   "slim": "not fat",
+   "not fat": "slim",
+   "fat": "not slim",
+   "not slim": "fat",
+   "good": "not bad",
+   "not bad": "good",
+   "bad": "not good",
+   "not good": "bad",
+   "best picture":"monalisa",
+   "maker":"sabbir",
+  };
+  replace=voice.replace(new RegExp
+  (Object.keys(mapObj).join('|'), 'g'),
+  match => mapObj[match])
+  reply = replace;
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 /////////
 else {
 reply = reply;
@@ -860,6 +935,12 @@ reply = reply;
 bbb.innerHTML="su-"+reply;
 window.speechSynthesis.speak(speech);
 };
+
+
+
+
+
+
 
 
 
