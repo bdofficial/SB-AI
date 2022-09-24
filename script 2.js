@@ -836,6 +836,21 @@ reply = fp.replaceAll("my favourite place is", 'your favourite place is');
 }
 ////////////////////////////////////////
 ////////////////////////////////////////
+else if (voice.includes("what is")) {
+  mapObj = {
+    "what is":"",
+    "best picture": "monalisa",
+    "best picture name": "monalisa",
+    "best picture maker": "lio nardo binchi",
+  };
+  replace = voice.replace(new RegExp(Object.keys(mapObj).join('|'), 'g'),
+    match => mapObj[match])
+  reply = replace;
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
 ////////////////////////////////////////
 else if (voice.includes("meaning") ||
   voice.includes("means")) {
@@ -868,9 +883,8 @@ mapObj={"what is": "",
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-/////////////q
-else if (voice.includes("what")
- ||voice.includes("how")||voice.includes("who")){
+/////////222
+else if (voice.includes("who is")) {
   dog = document.getElementById("dog7").value;
   reply = dog.replaceAll("my", 'your');
   speech.text = reply;
@@ -878,21 +892,22 @@ else if (voice.includes("what")
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-//////////a
-else if (voice.includes("my") & voice.includes("is")
- ||voice.includes("our") & voice.includes("is")
- ||voice.includes("her")& voice.includes("is")
- ||voice.includes("his")& voice.includes("is")
- ||voice.includes("meaning") 
- ||voice.includes("means")){
-  reply = "ok";
-  dog7.innerHTML = voice;
+///////////////
+else if (voice.includes("what")
+ ||voice.includes("how")
+ ||voice.includes("what") &voice.includes("her") & voice.includes("is")
+ ||voice.includes("what") &voice.includes("his") & voice.includes("is")
+ ||voice.includes("what") & voice.includes("is") & voice.includes("meaning")
+ ||voice.includes("what") & voice.includes("is") & voice.includes("means")){
+  dog = document.getElementById("dog7").value;
+  reply = dog.replaceAll("my", 'your');
   speech.text = reply;
   speech.volume = 0.8;
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice.includes("is")) {
+else if (voice.includes("my") & voice.includes("is")||voice.includes("our") & voice.includes("is")||voice.includes("her")||voice.includes("his")||voice.includes("meaning") ||
+  voice.includes("means")) {
   reply = "oky";
   dog7.innerHTML = voice;
   speech.text = reply;
@@ -900,8 +915,18 @@ else if (voice.includes("is")) {
   speech.rate = 0.45;
   speech.pitch = 1.5;
 }
-else if (voice.includes("i love")||voice.includes("i can")) {
+////////////222
+else if (voice.includes("is")) {
   reply = "ok";
+  dog7.innerHTML = voice;
+  speech.text = reply;
+  speech.volume = 0.8;
+  speech.rate = 0.45;
+  speech.pitch = 1.5;
+}
+///////////////
+else if (voice.includes("i love")) {
+  reply = "oky";
   dog7.innerHTML = voice;
   speech.text = reply;
   speech.volume = 0.8;
