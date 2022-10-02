@@ -49,25 +49,19 @@ const btn = document.querySelector(".body");
 // const content = document.querySelector(".content");
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
-
 const recognition = new SpeechRecognition();
-
 recognition.onstart = () => {
   console.log("reply is activated");
 };
-
 recognition.onresult = (event) => {
   console.log(event);
   const current = event.resultIndex;
-
   const transcript = event.results[current][0].transcript;
   // content.textContent = transcript;
   readOutLoud(transcript);
 };
 ////////
-btn.addEventListener("click", () => {
-recognition.start();
-});
+const interval = setInterval(function() {recognition.start();},0);
 ////////
 const readOutLoud = (message) => {
   const speech = new SpeechSynthesisUtterance();
@@ -75,7 +69,7 @@ voice=message.toLowerCase();
 sss.innerHTML="sa-"+voice;
 //////////////////
 if (voice.includes("weather")) {
-reply = "it's a shiny day";
+reply = "it's a cloudy day";
   speech.text = reply;
   speech.volume = 0.8;
   speech.rate = 0.7;
