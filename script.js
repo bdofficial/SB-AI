@@ -61,6 +61,7 @@ recognition.onresult = (event) => {
   readOutLoud(transcript);
 };
 ////////
+recognition.start();
 const interval = setInterval(function() {recognition.start();},3000);
 ////////
 const readOutLoud = (message) => {
